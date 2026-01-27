@@ -1,8 +1,12 @@
+import NavbarLuxury from "./components/NavbarLuxury";
+import VideoLandingHero from "./components/VideoLandingHero";
+
 import OutstandingViewsSwiper from "./components/ImageOffsetSwiper";
 import NewsletterSection from "./components/NewsletterSection";
 import OutstandingViewsHeader from "./components/OutstandingViewsHeader";
 import ParallaxFeatureSection from "./components/ParallaxFeatureSection";
 import SiteFooter from "./components/footer";
+
 export default function Home() {
   const slides = [
     { id: "1", src: "/slider/slide-1.jpg", alt: "Beach sunset" },
@@ -13,9 +17,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-96"></div>
+      <NavbarLuxury />
+      <VideoLandingHero videoSrc="/header-video.mp4" />
+
       <OutstandingViewsHeader />
       <OutstandingViewsSwiper slides={slides} />
+
       <ParallaxFeatureSection
         bgImage="/beach.jpg"
         cards={[
@@ -39,8 +46,8 @@ export default function Home() {
           },
         ]}
       />
-      <NewsletterSection backgroundImageUrl="/beach.jpg" />
 
+      <NewsletterSection backgroundImageUrl="/beach.jpg" />
       <SiteFooter />
     </>
   );

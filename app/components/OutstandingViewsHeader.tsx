@@ -3,7 +3,7 @@ import React from "react";
 export default function OutstandingViewsHeader() {
   return (
     <section className="w-full bg-[#f7f5ef] pt-14 pb-10">
-      <div className="mx-auto max-w-6xl px-4 text-center">
+      <div className="mx-auto max-w-5xl px-4 text-center">
         {/* Icon */}
         <div className="mx-auto flex items-center justify-center">
           <div className="h-12 w-12 text-[#55624f]">
@@ -26,7 +26,6 @@ export default function OutstandingViewsHeader() {
             leading-[0.95]
             text-4xl
             sm:text-6xl
-            md:text-7xl
           "
         >
           In the Heart of the South Pacific,

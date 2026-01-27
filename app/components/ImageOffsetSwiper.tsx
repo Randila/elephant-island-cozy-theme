@@ -35,7 +35,7 @@ export default function OutstandingViewsSwiper({
   const next = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full bg-[#f7f5ef] py-10">
+    <section className="w-full bg-[#f7f5ef] py-10 overflow-hidden">
 
       {/* Swiper area */}
       <div className="relative mx-auto mt-10 max-w-[1400px]">
