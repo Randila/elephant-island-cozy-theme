@@ -11,7 +11,7 @@ function getRect(el: Element | null): Rect | null {
   return { left: r.left, top: r.top, width: r.width, height: r.height };
 }
 
-export default function PreloaderDamai({
+export default function Preloader({
   show,
   onDone,
   videoSrc = "/header-video.mp4",

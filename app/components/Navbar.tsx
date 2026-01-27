@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function NavbarLuxury() {
+export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [isPastHero, setIsPastHero] = useState(false);
 

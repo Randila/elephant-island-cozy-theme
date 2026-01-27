@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function OutstandingViewsHeader() {
+export default function IntroText() {
   return (
     <section className="w-full bg-[#f7f5ef] pt-14 pb-10">
       <div className="mx-auto max-w-5xl px-4 text-center">

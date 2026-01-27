@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import PreloaderDamai from "./PreloaderDamai";
+import Preloader from "./Preloader";
 
 export default function PreloaderGate({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(true);
@@ -10,11 +10,14 @@ export default function PreloaderGate({ children }: { children: React.ReactNode 
   useEffect(() => {
     if (started.current) return;
     started.current = true;
+
+    // Scroll to top on mount (for page reloads)
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <PreloaderDamai
+      <Preloader
         show={show}
         videoSrc="/header-video.mp4"
         logoTextTop="ELEPHANT"

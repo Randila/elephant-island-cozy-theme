@@ -1,9 +1,9 @@
-import NavbarLuxury from "./components/NavbarLuxury";
+import Navbar from "./components/Navbar";
 import VideoLandingHero from "./components/VideoLandingHero";
 
 import OutstandingViewsSwiper from "./components/ImageOffsetSwiper";
 import NewsletterSection from "./components/NewsletterSection";
-import OutstandingViewsHeader from "./components/OutstandingViewsHeader";
+import IntroText from "./components/IntroText";
 import ParallaxFeatureSection from "./components/ParallaxFeatureSection";
 import SiteFooter from "./components/footer";
 
@@ -17,10 +17,10 @@ export default function Home() {
 
   return (
     <>
-      <NavbarLuxury />
+      <Navbar />
       <VideoLandingHero videoSrc="/header-video.mp4" />
 
-      <OutstandingViewsHeader />
+      <IntroText />
       <OutstandingViewsSwiper slides={slides} />
 
       <ParallaxFeatureSection
