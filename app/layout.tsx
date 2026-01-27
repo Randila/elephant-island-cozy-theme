@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Marcellus, Jost } from "next/font/google";
 import "./globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import PreloaderGate from "./components/PreloaderGate";
 
 const marcellus = Marcellus({
