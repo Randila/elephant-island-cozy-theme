@@ -69,7 +69,6 @@ export default function Preloader({
       await windowAnim.set({
         width: 320,
         height: 0,
-        borderRadius: 8,
         bottom: 0,
         left: "50%",
         x: "-50%",
@@ -198,10 +197,10 @@ export default function Preloader({
           y: "-50%",
         }}
       >
-        <div className="font-[var(--font-jost)] text-[10px] tracking-[0.35em] uppercase text-black/60">
+        <div className="font-marcellus text-[10px] tracking-[0.35em] uppercase text-black/60">
           THE
         </div>
-        <div className="font-[var(--font-marcellus)] text-lg tracking-[0.22em] text-black/90">
+        <div className="font-marcellus text-lg tracking-[0.22em] text-black/90">
           {logoTextTop} {logoTextBottom}
         </div>
       </motion.div>

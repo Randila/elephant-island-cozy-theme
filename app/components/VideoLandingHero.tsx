@@ -5,7 +5,7 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
       <div className="absolute inset-0 bg-black/35" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
         <h3 className="mb-8">Elephant Island</h3>
-        <h1 className="font-[var(--font-marcellus)] text-5xl md:text-7xl leading-[1.05]">
+        <h1 className="font-marcellus text-5xl md:text-7xl leading-[1.05]">
           Find the spirit of Ceylon
           <br/> at the Elephant Island
         </h1>

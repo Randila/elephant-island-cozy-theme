@@ -101,7 +101,7 @@ export default function ParallaxFeatureSection({
               </div>
 
               {/* big title */}
-              <h2 className="font-[ui-serif,Georgia,Cambria,'Times New Roman',Times,serif] text-4xl leading-[1.05] sm:text-6xl">
+              <h2 className="font-marcellus text-4xl leading-[1.05] sm:text-6xl">
                 One of the World&apos;s Most
                 <br />
                 Desirable Locations

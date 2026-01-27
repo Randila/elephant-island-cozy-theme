@@ -39,7 +39,7 @@ export default function NewsletterSection({
                 STAY TUNED WITH COZYSTAY
               </p>
 
-              <h2 className="mt-6 font-serif text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+              <h2 className="mt-6 font-marcellus text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
                 Sign up for our newsletter to
                 <br />
                 receive our news, deals and

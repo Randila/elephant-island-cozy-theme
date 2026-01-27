@@ -21,7 +21,7 @@ export default function IntroText() {
         <h2
           className="
             mt-6
-            font-[ui-serif,Georgia,Cambria,'Times New Roman',Times,serif]
+            font-marcellus
             text-[#1b1b1b]
             leading-[0.95]
             text-4xl
