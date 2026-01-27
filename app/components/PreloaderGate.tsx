@@ -1,44 +1,26 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Preloader from "./Preloader";
+import PreloaderDamai from "./PreloaderDamai";
 
-export default function PreloaderGate({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PreloaderGate({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(true);
-  const startRef = useRef<number>(Date.now());
-
-  // lock scroll while showing
-  useEffect(() => {
-    if (!show) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [show]);
+  const started = useRef(false);
 
   useEffect(() => {
-    const minMs = 1200;
-
-    const finish = () => {
-      const elapsed = Date.now() - startRef.current;
-      const wait = Math.max(0, minMs - elapsed);
-      window.setTimeout(() => setShow(false), wait);
-    };
-
-    if (document.readyState === "complete") finish();
-    else window.addEventListener("load", finish);
-
-    return () => window.removeEventListener("load", finish);
+    if (started.current) return;
+    started.current = true;
   }, []);
 
   return (
     <>
-      <Preloader show={show} logoSrc="/logo.png" />
+      <PreloaderDamai
+        show={show}
+        videoSrc="/header-video.mp4"
+        logoTextTop="ELEPHANT"
+        logoTextBottom="ISLAND"
+        onDone={() => setShow(false)}
+      />
       {children}
     </>
   );

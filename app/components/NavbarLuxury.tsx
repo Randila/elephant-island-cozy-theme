@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavbarLuxury() {
   const [scrollY, setScrollY] = useState(0);
@@ -11,87 +11,63 @@ export default function NavbarLuxury() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setScrollY(currentScrollY);
-      
-      // Assuming hero section is around 600px height (typical for hero sections)
-      // You can adjust this value based on your actual hero section height
-      setIsPastHero(currentScrollY > 600);
+      setIsPastHero(currentScrollY > window.innerHeight);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const getNavbarClasses = () => {
-    let classes = "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ";
-    
-    if (isPastHero) {
-      classes += "py-2 bg-white border-b border-slate-200 ";
-    } else if (scrollY > 100) {
-      classes += "py-2 backdrop-blur-md bg-white/10 border-b border-slate-50/25 ";
-    } else {
-      classes += "py-6 border-b border-slate-50/25";
-    }
-    
-    return classes;
-  };
+  const navbarClasses = `
+    transition-all duration-300 ease-in-out
+    ${scrollY > 100 ? "py-4" : "py-6"}
+    ${scrollY > 100 && !isPastHero ? "backdrop-blur-md bg-black/20" : ""}
+    ${isPastHero ? "bg-white" : "bg-transparent"}
+  `;
 
-  const getTextClasses = (baseClasses: string) => {
-    if (isPastHero) {
-      return baseClasses.replace("text-white", "text-slate-900").replace("text-white/85", "text-slate-700").replace("text-white/80", "text-slate-900").replace("text-white/60", "text-slate-700");
-    }
-    return baseClasses;
-  };
+  const textClasses = isPastHero ? "text-gray-900" : "text-white";
+  const lineClasses = isPastHero ? "bg-gray-900/15" : "bg-white/15";
+  const bookButtonClasses = isPastHero
+    ? "bg-gray-900 text-white hover:bg-gray-800"
+    : "bg-white/15 text-white backdrop-blur-md hover:bg-white/20";
+
   return (
-    <header className={getNavbarClasses()}>
+    <header className={`fixed top-0 left-0 right-0 z-50 border-b border-slate-50/20 ${navbarClasses}`}>
 
       <nav className="mx-auto max-w-[1400px] px-6">
-        <div className="h-16 grid grid-cols-3 items-center">
-          {/* Left */}
-          <div className={`flex items-center gap-5 ${getTextClasses("text-white/85")}`}>
+        <div className={`${scrollY > 100 ? "h-12" : "h-16"} grid grid-cols-3 items-center transition-all duration-300 ease-in-out`}>
+          <div className={`flex items-center gap-5 ${isPastHero ? "text-gray-700" : "text-white/85"}`}>
             <button aria-label="Open menu" className="group inline-flex gap-2">
               <span className="grid gap-[5px]">
-                <span className={`h-px w-5 ${getTextClasses("bg-white/80")} group-hover:bg-white transition`} />
-                <span className={`h-px w-4 ${getTextClasses("bg-white/60")} group-hover:bg-white transition`} />
+                <span className={`h-px w-5 ${isPastHero ? "bg-gray-700" : "bg-white/80"} group-hover:${isPastHero ? "bg-gray-900" : "bg-white"} transition`} />
+                <span className={`h-px w-4 ${isPastHero ? "bg-gray-500" : "bg-white/60"} group-hover:${isPastHero ? "bg-gray-700" : "bg-white"} transition`} />
               </span>
             </button>
 
-            <div className={`hidden md:flex items-center gap-6 text-xs tracking-[0.12em] uppercase ${getTextClasses("text-white")}`}>
-              <Link href="#stay" className={`transition ${isPastHero ? "hover:text-slate-600" : "hover:text-white"}`}>
-                Stay
-              </Link>
-              <Link href="#dining" className={`transition ${isPastHero ? "hover:text-slate-600" : "hover:text-white"}`}>
-                Dining
-              </Link>
-              <Link href="#experiences" className={`transition ${isPastHero ? "hover:text-slate-600" : "hover:text-white"}`}>
-                Experiences
-              </Link>
+            <div className="hidden md:flex items-center gap-6 text-xs tracking-[0.12em] uppercase">
+              <Link href="#stay" className={`hover:${isPastHero ? "text-gray-900" : "text-white"} transition`}>Stay</Link>
+              <Link href="#dining" className={`hover:${isPastHero ? "text-gray-900" : "text-white"} transition`}>Dining</Link>
+              <Link href="#relax" className={`hover:${isPastHero ? "text-gray-900" : "text-white"} transition`}>Relax</Link>
+              <Link href="#discover" className={`hover:${isPastHero ? "text-gray-900" : "text-white"} transition`}>Discover</Link>
             </div>
           </div>
 
-          {/* Center */}
+          {/* IMPORTANT: id="nav-logo" */}
           <div className="flex justify-center">
-            <Link
-              href="/"
-              className={`text-center leading-none select-none ${getTextClasses("text-white")}`}
-            >
+            <Link id="nav-logo" href="/" className={`${textClasses} text-center leading-none select-none`}>
+              <div className="font-[var(--font-jost)] text-[10px] tracking-[0.35em] uppercase opacity-70">
+                THE
+              </div>
               <div className="font-[var(--font-marcellus)] tracking-[0.22em] text-sm md:text-base">
                 ELEPHANT ISLAND
-              </div>
-              <div className="font-[var(--font-jost)] text-[10px] tracking-[0.35em] uppercase opacity-70 mt-1">
-                RESORT
               </div>
             </Link>
           </div>
 
-          {/* Right */}
           <div className="flex justify-end">
             <Link
               href="#book"
-              className={`rounded-full px-4 py-2 text-xs tracking-[0.12em] uppercase backdrop-blur-md transition ${
-                isPastHero 
-                  ? "bg-slate-900 text-white hover:bg-slate-800" 
-                  : "bg-white/15 text-white hover:bg-white/20"
-              }`}
+              className={`rounded-full px-4 py-2 text-xs tracking-[0.12em] uppercase transition ${bookButtonClasses}`}
             >
               Book now
             </Link>
