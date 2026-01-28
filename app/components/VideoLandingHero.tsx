@@ -1,6 +1,6 @@
 export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black">
+    <section className="relative h-[125dvh] w-full overflow-hidden bg-black">
       <video className="absolute inset-0 h-full w-full object-cover" src={videoSrc} autoPlay muted loop playsInline />
       <div className="absolute inset-0 bg-black/35" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
@@ -9,6 +9,10 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
           Find the spirit of Ceylon
           <br/> at the Elephant Island
         </h1>
+        <div className="h-12 w-px bg-white/35 my-8"></div>
+        <div>
+          <button className="bg-[#00383C] px-8 py-3 text-sm rounded-full">Explore Tours</button>
+        </div>
       </div>
     </section>
   );

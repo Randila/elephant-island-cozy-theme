@@ -87,7 +87,7 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-slate-50/20 ${navbarClasses}`}
+        className={`fixed top-0 left-0 right-0 z-50 border-b ${scrollY > 800 ? "border-slate-200" : "border-slate-50/20"} ${navbarClasses}`}
       >
         <nav className="mx-auto max-w-[1400px] px-4 sm:px-6">
           <div

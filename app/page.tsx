@@ -6,6 +6,8 @@ import NewsletterSection from "./components/NewsletterSection";
 import IntroText from "./components/IntroText";
 import ParallaxFeatureSection from "./components/ParallaxFeatureSection";
 import SiteFooter from "./components/footer";
+import TwoColumnSection from "./components/TwoColumnSection";
+import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
 
 export default function Home() {
   const slides = [
@@ -13,6 +15,10 @@ export default function Home() {
     { id: "2", src: "/slider/slide-2.jpg", alt: "Beach sunset" },
     { id: "3", src: "/slider/slide-3.jpg", alt: "Beach sunset" },
     { id: "4", src: "/slider/slide-4.jpg", alt: "Beach sunset" },
+    { id: "5", src: "/slider/slide-1.jpg", alt: "Beach sunset" },
+    { id: "6", src: "/slider/slide-2.jpg", alt: "Beach sunset" },
+
+
   ];
 
   return (
@@ -22,6 +28,9 @@ export default function Home() {
 
       <IntroText />
       <OutstandingViewsSwiper slides={slides} />
+
+      <TwoColumnSection />
+      <TwoColumnSectionReverse />
 
       <ParallaxFeatureSection
         bgImage="/beach.jpg"

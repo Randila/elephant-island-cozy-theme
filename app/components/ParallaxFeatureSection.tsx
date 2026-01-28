@@ -42,16 +42,16 @@ export default function ParallaxFeatureSection({
       <Parallax
         bgImage={bgImage}
         bgImageAlt="Parallax Background"
-        strength={220}
+        strength={100}
         className="relative"
       >
         {/* Height of parallax hero */}
         <div className="relative h-screen">
           {/* dark overlay */}
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/60" />
 
           {/* content */}
-          <div className="relative z-10 flex h-full items-center justify-center px-4">
+          <div className="relative z-10 flex h-full items-start pt-24 justify-center px-4">
             <div className="mx-auto max-w-3xl text-center text-white">
               {/* tiny icon + label */}
               <div className="mx-auto mb-4 flex flex-col items-center gap-2">
@@ -120,13 +120,12 @@ export default function ParallaxFeatureSection({
       {/* Cards area (overlapping) */}
       <div className="relative">
         {/* Pull cards upward to overlap parallax */}
-        <div className="-mt-28 sm:-mt-32">
+        <div className="-mt-28 sm:-mt-64">
           <div className="mx-auto max-w-6xl px-4">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
               {cards.map((c) => (
                 <div key={c.title} className="text-center">
                   {/* image frame */}
-                  <div className="relative mx-auto w-full max-w-[360px]">
                     <div className="relative overflow-hidden bg-white shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
                       <img
                         src={c.img}
@@ -136,12 +135,8 @@ export default function ParallaxFeatureSection({
                       />
                     </div>
 
-                    {/* thin gold border overlay like screenshot */}
-                    <div className="pointer-events-none absolute inset-[-14px] border border-[#c8b08a]/70" />
-                  </div>
-
                   {/* title */}
-                  <h3 className="mt-10 font-[ui-serif,Georgia,Cambria,'Times New Roman',Times,serif] text-3xl text-[#1b1b1b]">
+                  <h3 className="mt-10 font-marcellus text-3xl text-[#1b1b1b]">
                     {c.title}
                   </h3>
 

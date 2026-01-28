@@ -112,13 +112,7 @@ export default function OutstandingViewsSwiper({
           <span className="text-xl leading-none">›</span>
         </button>
 
-        {/* Optional handwritten line under (like screenshot) */}
-        <div className="mx-auto max-w-6xl px-4">
-          <p className="mt-6 font-[cursive] text-xl text-[#2a2a2a]/70">
-            Inspired by our history, surrounded by nature and designed to offer
-            a different experience
-          </p>
-        </div>
+      
       </div>
     </section>
   );
