@@ -1,8 +1,5 @@
 'use client'
 
-import { Parallax } from 'react-parallax'
-import { motion } from 'framer-motion'
-
 const TwoColumnSectionReverse = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white">
@@ -10,58 +7,29 @@ const TwoColumnSectionReverse = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Left Column - Text Content */}
-          <motion.div 
-            className="order-1 lg:order-1 space-y-6"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="order-1 lg:order-1 space-y-6">
             {/* Small Uppercase Heading */}
-            <motion.h3 
-              className="text-sm font-semibold tracking-widest uppercase text-gray-600"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
+            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600">
               OUR RESTAURANT
-            </motion.h3>
+            </h3>
 
             {/* Main Heading */}
-            <motion.h2 
-              className="text-4xl lg:text-5xl xl:text-6xl font-marcellus text-gray-900"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-marcellus text-gray-900">
               Prize winning Balinese bistro
-            </motion.h2>
+            </h2>
 
             {/* Description Paragraphs */}
-            <motion.div 
-              className="space-y-4"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
+            <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
                 The food at Damai is easy to enjoy. Simple brasserie dishes. Balinese classics. Tropical, local and good.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our cuisine has won international awards and have been featured in two cook books.
               </p>
-            </motion.div>
+            </div>
 
             {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-            >
+            <div>
               <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-all duration-300 overflow-hidden">
                 {/* Left decorative icon */}
                 <span className="absolute left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -83,21 +51,23 @@ const TwoColumnSectionReverse = () => {
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          {/* Right Column - Parallax Image */}
+          {/* Right Column - Static Image */}
           <div className="order-2 lg:order-2 p-10">
-            <Parallax
-              bgImage="/food.jpg" // Replace with actual image path
-              bgImageAlt="Restaurant interior"
-              strength={50}
+            <div 
               className="h-[600px] lg:h-[700px] w-auto overflow-hidden"
+              style={{
+                backgroundImage: 'url(/food.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
             >
               <div className="h-full flex items-center justify-center">
                 {/* Optional: Add overlay or content here if needed */}
               </div>
-            </Parallax>
+            </div>
           </div>
         </div>
       </div>

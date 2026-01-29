@@ -121,8 +121,8 @@ export default function ParallaxFeatureSection({
       <div className="relative">
         {/* Pull cards upward to overlap parallax */}
         <div className="-mt-28 sm:-mt-64">
-          <div className="mx-auto max-w-6xl px-4">
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <div className="mx-auto max-w-7xl px-4">
+            <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
               {cards.map((c) => (
                 <div key={c.title} className="text-center">
                   {/* image frame */}

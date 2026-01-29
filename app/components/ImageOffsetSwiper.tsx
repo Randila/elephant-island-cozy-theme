@@ -36,7 +36,6 @@ export default function OutstandingViewsSwiper({
 
   return (
     <section className="w-full bg-[#f7f5ef] py-10 overflow-hidden">
-
       {/* Swiper area */}
       <div className="relative mx-auto mt-10 max-w-[1400px]">
         {/* This is the “only-at-start” left gap */}
@@ -88,7 +87,7 @@ export default function OutstandingViewsSwiper({
           aria-label="Previous slide"
           className={[
             "absolute left-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white/90 shadow-md backdrop-blur",
+            "h-12 w-12 rounded-full bg-white border border-slate-200 shadow-lg backdrop-blur cursor-pointer",
             "flex items-center justify-center",
             "transition-opacity",
             isBeginning ? "opacity-40 pointer-events-none" : "opacity-100",
@@ -103,7 +102,7 @@ export default function OutstandingViewsSwiper({
           aria-label="Next slide"
           className={[
             "absolute right-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white/90 shadow-md backdrop-blur",
+            "h-12 w-12 rounded-full bg-white border border-slate-200 shadow-md backdrop-blur cursor-pointer",
             "flex items-center justify-center",
             "transition-opacity",
             isEnd ? "opacity-40 pointer-events-none" : "opacity-100",
@@ -111,8 +110,6 @@ export default function OutstandingViewsSwiper({
         >
           <span className="text-xl leading-none">›</span>
         </button>
-
-      
       </div>
     </section>
   );
