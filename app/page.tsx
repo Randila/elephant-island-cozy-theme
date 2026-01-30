@@ -10,16 +10,64 @@ import TwoColumnSection from "./components/TwoColumnSection";
 import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
 
 export default function Home() {
+  
   const slides = [
-    { id: "1", src: "/slider/slide-1.jpg", alt: "Beach sunset" },
-    { id: "2", src: "/slider/slide-2.jpg", alt: "Beach sunset" },
-    { id: "3", src: "/slider/slide-3.jpg", alt: "Beach sunset" },
-    { id: "4", src: "/slider/slide-4.jpg", alt: "Beach sunset" },
-    { id: "5", src: "/slider/slide-1.jpg", alt: "Beach sunset" },
-    { id: "6", src: "/slider/slide-2.jpg", alt: "Beach sunset" },
+  {
+    id: "1",
+    src: "/slider/slide-1.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Explorer",
+    subtitle: "A private island-to-highlands journey",
+    href: "/packages/explorer",
+  },
+  {
+    id: "2",
+    src: "/slider/slide-2.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Romance",
+    subtitle: "Romantic couple escape",
+    href: "/packages/romance",
+  },
+  {
+    id: "3",
+    src: "/slider/slide-3.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Wellness",
+    subtitle: "Relax, reset, and rejuvenate",
+    href: "/packages/wellness",
+  },
+  {
+    id: "4",
+    src: "/slider/slide-4.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Adventure",
+    subtitle: "Wildlife, culture & discovery",
+    href: "/packages/adventure",
+  },
+  {
+    id: "5",
+    src: "/slider/slide-1.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Luxury",
+    subtitle: "Premium private experiences",
+    href: "/packages/luxury",
+  },
+  {
+    id: "6",
+    src: "/slider/slide-2.jpg",
+    alt: "Beach sunset",
+    badge: "SAVE OVER 15%",
+    title: "Elephant Island Signature",
+    subtitle: "Our most loved island journey",
+    href: "/packages/signature",
+  },
+];
 
-
-  ];
 
   return (
     <>
@@ -32,31 +80,32 @@ export default function Home() {
       <TwoColumnSection />
       <TwoColumnSectionReverse />
 
-      <ParallaxFeatureSection
-        bgImage="/beach.jpg"
-        cards={[
-          {
-            title: "Spa & Wellness",
-            desc: "Set in lush jungle, our modern spa embodies the calm of nature, offering extraordinary visual and auditory experiences that pamper and heal.",
-            img: "/pool.jpg",
-            link: "#",
-          },
-          {
-            title: "Island Activities",
-            desc: "A playground for the over-and-underwater world adventurers. Surfing, diving, snorkeling, fishing, sailing, nature trails & villages to explore.",
-            img: "/surf.jpg",
-            link: "#",
-          },
-          {
-            title: "Gastronomic Dine",
-            desc: "Our restaurants use fresh, organic ingredients that are locally produced and sourced. Delicious flavors and a warm atmosphere are the perfect way to unwind.",
-            img: "/wine.jpg",
-            link: "#",
-          },
-        ]}
-      />
+    <ParallaxFeatureSection
+  bgImage="/beach.jpg"
+  cards={[
+    {
+      title: "Airport Pickups and Transfers",
+      desc: "Seamless arrival at Colombo Airport with private A/C vehicles and professional driver guides. We handle every transfer so your journey begins stress-free.",
+      img: "/pickup.jpg",
+      link: "#",
+    },
+    {
+      title: "Luxury Vehicles & Driver Guides",
+      desc: "Travel Sri Lanka in comfort with licensed English-speaking driver guides and modern A/C cars or mini-vans tailored to your group size.",
+      img: "/chauffeur.png",
+      link: "#",
+    },
+    {
+      title: "Tailor-Made Sri Lanka Tours",
+      desc: "Private itineraries crafted around your interests, budget, and travel style — from cultural highlights to beaches, wildlife and luxury escapes.",
+      img: "/surf.jpg",
+      link: "#",
+    },
+  ]}
+/>
 
-      <NewsletterSection backgroundImageUrl="/beach.jpg" />
+
+      <NewsletterSection backgroundImageUrl="/stay.webp" />
       <SiteFooter />
     </>
   );

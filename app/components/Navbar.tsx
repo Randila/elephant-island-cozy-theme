@@ -149,10 +149,10 @@ export default function Navbar() {
             <div className="flex justify-end">
               <Link
                 href="#book"
-                className={`rounded-full px-4 py-2 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
+                className={`rounded-full p-4 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
               >
                 <span className="inline md:hidden">Book</span>
-                <span className="hidden md:inline">Book now</span>
+                <span className="hidden md:inline">Book Your Stay</span>
               </Link>
             </div>
           </div>

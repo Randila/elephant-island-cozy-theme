@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
@@ -9,13 +11,13 @@ type Slide = {
   id: string;
   src: string;
   alt?: string;
+  badge?: string;
+  title: string;
+  subtitle?: string;
+  href?: string;
 };
 
-export default function OutstandingViewsSwiper({
-  slides,
-}: {
-  slides: Slide[];
-}) {
+export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) {
   const swiperRef = useRef<SwiperType | null>(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -36,9 +38,8 @@ export default function OutstandingViewsSwiper({
 
   return (
     <section className="w-full bg-[#f7f5ef] py-10 overflow-hidden">
-      {/* Swiper area */}
       <div className="relative mx-auto mt-10 max-w-[1400px]">
-        {/* This is the “only-at-start” left gap */}
+        {/* only-at-start left gap */}
         <div
           className={[
             "transition-[padding] duration-500 ease-out",
@@ -48,35 +49,81 @@ export default function OutstandingViewsSwiper({
           <Swiper
             onSwiper={handleSwiper}
             onSlideChange={updateEdges}
-            speed={650} // smooth button slide
+            speed={650}
             slidesPerView={"auto"}
             spaceBetween={26}
             grabCursor
-            // helps keep the swipe feeling snappy & like “one-by-one”
             longSwipesRatio={0.15}
             threshold={8}
             className="!overflow-visible"
           >
-            {slides.map((s) => (
-              <SwiperSlide
-                key={s.id}
-                className="
-                  !w-[280px] xs:!w-[320px] sm:!w-[360px] md:!w-[420px] lg:!w-[400px]
-                "
-              >
-                <div className="bg-white">
-                  <div className="relative aspect-[2/3] w-full overflow-hidden bg-black/5">
-                    {/* Use next/image if you want; plain img is fine too */}
-                    <img
-                      src={s.src}
-                      alt={s.alt ?? ""}
-                      className="h-full w-full object-cover"
-                      draggable={false}
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+            {slides.map((s) => {
+              const Wrapper: React.ElementType = s.href ? Link : "div";
+              const wrapperProps = s.href
+                ? { href: s.href, "aria-label": s.title }
+                : {};
+
+              return (
+                <SwiperSlide
+                  key={s.id}
+                  className="!w-[280px] xs:!w-[320px] sm:!w-[360px] md:!w-[420px] lg:!w-[400px]"
+                >
+                  <article className="group relative overflow-hidden bg-black/5 shadow-sm ring-1 ring-black/10">
+                    <Wrapper
+                      {...wrapperProps}
+                      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40"
+                    >
+                      {/* image */}
+                      <div className="relative aspect-[2/3] w-full">
+                        <img
+                          src={s.src}
+                          alt={s.alt ?? s.title}
+                          className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                          draggable={false}
+                        />
+                        {/* overlay for readability */}
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/10 to-black/60" />
+                      </div>
+
+                      {/* content overlay */}
+                      <div className="absolute inset-0 flex flex-col items-center justify-end p-7 sm:p-8 text-center">
+                        {/* badge */}
+                        {s.badge ? (
+                          <p className="mb-auto mt-2 text-[11px] font-semibold tracking-[0.22em] text-white/80">
+                            {s.badge}
+                          </p>
+                        ) : (
+                          <div className="mb-auto mt-2 h-[14px]" />
+                        )}
+
+                        <h3 className="font-marcellus text-3xl text-white sm:text-4xl">
+                          {s.title}
+                        </h3>
+
+                        {s.subtitle ? (
+                          <p className="mt-2 text-sm text-white/85 sm:text-base">
+                            {s.subtitle}
+                          </p>
+                        ) : null}
+
+                        {/* button */}
+                        <div className="mt-6 inline-flex items-center justify-between gap-3 rounded-full bg-white/20 w-40 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/25 transition group-hover:bg-white/25">
+                          
+                          <div className="pl-4">More info</div>
+
+                          <div>
+                            <span className="inline-flex p-4 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20">
+                              <ChevronRight className="w-3 h-3 text-white" />
+                            </span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </Wrapper>
+                  </article>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
 
@@ -87,13 +134,13 @@ export default function OutstandingViewsSwiper({
           aria-label="Previous slide"
           className={[
             "absolute left-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white border border-slate-200 shadow-lg backdrop-blur cursor-pointer",
+            "h-12 w-12 rounded-full bg-white/80 border border-black/10 shadow-lg backdrop-blur",
             "flex items-center justify-center",
             "transition-opacity",
-            isBeginning ? "opacity-40 pointer-events-none" : "opacity-100",
+            isBeginning ? "opacity-40 pointer-events-none" : "opacity-100 cursor-pointer",
           ].join(" ")}
         >
-          <span className="text-xl leading-none">‹</span>
+          <ChevronLeft className="w-5 h-5" />
         </button>
 
         <button
@@ -102,13 +149,13 @@ export default function OutstandingViewsSwiper({
           aria-label="Next slide"
           className={[
             "absolute right-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white border border-slate-200 shadow-md backdrop-blur cursor-pointer",
+            "h-12 w-12 rounded-full bg-white/80 border border-black/10 shadow-lg backdrop-blur",
             "flex items-center justify-center",
             "transition-opacity",
-            isEnd ? "opacity-40 pointer-events-none" : "opacity-100",
+            isEnd ? "opacity-40 pointer-events-none" : "opacity-100 cursor-pointer",
           ].join(" ")}
         >
-          <span className="text-xl leading-none">›</span>
+          <ChevronRight className="w-5 h-5" />
         </button>
       </div>
     </section>

@@ -126,11 +126,11 @@ export default function ParallaxFeatureSection({
               {cards.map((c) => (
                 <div key={c.title} className="text-center">
                   {/* image frame */}
-                    <div className="relative overflow-hidden bg-white shadow-[0_18px_45px_rgba(0,0,0,0.18)]">
+                    <div className="relative overflow-hidden bg-white shadow-[0_18px_45px_rgba(0,0,0,0.1)]">
                       <img
                         src={c.img}
                         alt={c.title}
-                        className="h-[420px] w-full object-cover"
+                        className="h-[440px] w-full object-cover"
                         draggable={false}
                       />
                     </div>

@@ -14,7 +14,7 @@ export default function IntroText() {
 
         {/* Small top label */}
         <p className="mt-3 text-xs tracking-[0.22em] font-semibold text-[#55624f] uppercase">
-          Welcome to Cozystay Resort
+          Welcome to Elephant Island
         </p>
 
         {/* Big heading */}
@@ -28,18 +28,14 @@ export default function IntroText() {
             sm:text-6xl
           "
         >
-          In the Heart of the South Pacific,
+          At the Edge of the Indian Ocean,
           <br />
-          Outstanding Views
+          Endless Tropical Beauty
         </h2>
 
         {/* Paragraph */}
         <p className="mx-auto mt-8 max-w-3xl text-[15px] leading-7 text-[#2e2e2e]/80">
-          Nestled in the heart of the Pacific Islands resort, on the edge of a
-          tranquil and beautiful Garden Island, CozyStay is a haven of warmth,
-          tranquility and rejuvenation. Bathed in brilliant sunshine and clear
-          skies, it offers stunning views of palm-lined beaches and gorgeous
-          coral reefs.
+          Set along the breathtaking coastline of Sri Lanka, Elephant Island is a sanctuary of beauty, culture, and unforgettable journeys. From golden beaches to lush tropical landscapes, we curate private, tailor-made holidays designed to immerse you in the island’s magic — offering exceptional experiences for every traveller and every budget.
         </p>
       </div>
     </section>

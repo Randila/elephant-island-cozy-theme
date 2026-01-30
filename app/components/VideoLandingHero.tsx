@@ -1,18 +1,27 @@
 export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
   return (
-    <section className="relative h-[125dvh] w-full overflow-hidden bg-black">
+    <section className="relative h-[125dvh] 2xl:h-screen w-full overflow-hidden bg-black">
       <video className="absolute inset-0 h-full w-full object-cover" src={videoSrc} autoPlay muted loop playsInline />
       <div className="absolute inset-0 bg-black/35" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
-        <h3 className="mb-8">Elephant Island</h3>
-        <h1 className="font-marcellus text-5xl md:text-7xl leading-[1.05]">
+        <img src="/elephant.png" className="w-10 invert" alt="" />
+        <h3 className="mb-8 font-marcellus">Elephant Island</h3>
+        <h1 className="font-marcellus text-5xl md:text-7xl 2xl:text-8xl leading-[1.05]">
           Find the spirit of Ceylon
           <br/> at the Elephant Island
         </h1>
-        <div className="h-12 w-px bg-white/35 my-8"></div>
-        <div>
-          <button className="bg-[#00383C] px-8 py-3 text-sm rounded-full">Explore Tours</button>
-        </div>
+        <div className="h-12 w-px bg-white/45 my-8"></div>
+          {/* CTA Button */}
+            <div>
+              <button className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-marcellus font-medium text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-all duration-300 overflow-hidden cursor-pointer">
+                
+                {/* Button text */}
+                <span className="px-4">Explore our Tours</span>
+                
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-none group-hover:transition-transform group-hover:duration-700" />
+              </button>
+            </div>
       </div>
     </section>
   );

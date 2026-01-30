@@ -10,7 +10,7 @@ type NewsletterSectionProps = {
 
 export default function NewsletterSection({
   backgroundImageUrl,
-  strength = 300,
+  strength = 100,
 }: NewsletterSectionProps) {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
