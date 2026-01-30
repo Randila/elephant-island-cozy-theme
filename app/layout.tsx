@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Marcellus, Jost } from "next/font/google";
 import "./globals.css";
 import PreloaderGate from "./components/PreloaderGate";
+import LenisProvider from "./components/LenisProvider";
 
 const marcellus = Marcellus({
   variable: "--font-marcellus",
@@ -28,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${marcellus.variable} ${jost.variable} antialiased`}>
-        <PreloaderGate>{children}</PreloaderGate>
+        <LenisProvider>
+          <PreloaderGate>{children}</PreloaderGate>
+        </LenisProvider>
       </body>
     </html>
   );

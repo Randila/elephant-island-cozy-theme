@@ -140,7 +140,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
             isBeginning ? "pointer-events-none" : "cursor-pointer",
           ].join(" ")}
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-5 h-5 text-black" />
         </button>
 
         <button
@@ -154,7 +154,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
             "transition-opacity",
           ].join(" ")}
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-5 h-5 text-black" />
         </button>
       </div>
     </section>
