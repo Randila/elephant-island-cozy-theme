@@ -46,64 +46,21 @@ export default function ParallaxFeatureSection({
         className="relative"
       >
         {/* Height of parallax hero */}
-        <div className="relative h-screen">
+        <div className="relative h-[55dvh] md:h-screen">
           {/* dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
 
           {/* content */}
           <div className="relative z-10 flex h-full items-start pt-24 justify-center px-4">
             <div className="mx-auto max-w-3xl text-center text-white">
-              {/* tiny icon + label */}
-              <div className="mx-auto mb-4 flex flex-col items-center gap-2">
-                <div className="h-8 w-8 opacity-90">
-                  {/* minimal line icon */}
-                  <svg
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    className="h-full w-full"
-                  >
-                    <path
-                      d="M10 46h44"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M18 46V30c0-2 1.6-3.6 3.6-3.6h20.8c2 0 3.6 1.6 3.6 3.6v16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M26 32h4M26 38h4M34 32h4M34 38h4"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M12 26c3-5 8-8 14-8"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M52 26c-3-5-8-8-14-8"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-
-                <p className="text-[11px] font-semibold tracking-[0.22em] uppercase opacity-90">
-                  Unforgettable Experience
-                </p>
+              <div className="flex justify-center mb-3">
+                <img src="/island.png" className="w-10 invert" alt="" />
               </div>
 
               {/* big title */}
               <h2 className="font-marcellus text-4xl leading-[1.05] sm:text-6xl">
                 One of the World&apos;s Most
-                <br />
+                <br className="hidden md:block" />
                 Desirable Locations
               </h2>
 
