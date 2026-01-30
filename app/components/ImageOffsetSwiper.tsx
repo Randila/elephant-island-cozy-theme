@@ -134,10 +134,10 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
           aria-label="Previous slide"
           className={[
             "absolute left-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white/80 border border-black/10 shadow-lg backdrop-blur",
+            "h-12 w-12 rounded-full bg-white/50 border border-black/10 shadow-lg backdrop-blur-sm",
             "flex items-center justify-center",
             "transition-opacity",
-            isBeginning ? "opacity-40 pointer-events-none" : "opacity-100 cursor-pointer",
+            isBeginning ? "pointer-events-none" : "cursor-pointer",
           ].join(" ")}
         >
           <ChevronLeft className="w-5 h-5" />
@@ -148,11 +148,10 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
           onClick={next}
           aria-label="Next slide"
           className={[
-            "absolute right-2 top-1/2 z-20 -translate-y-1/2",
-            "h-12 w-12 rounded-full bg-white/80 border border-black/10 shadow-lg backdrop-blur",
+            "absolute right-2 top-1/2 z-20 -translate-y-1/2 cursor-pointer",
+            "h-12 w-12 rounded-full bg-white/50 border border-black/10 shadow-lg backdrop-blur-sm",
             "flex items-center justify-center",
             "transition-opacity",
-            isEnd ? "opacity-40 pointer-events-none" : "opacity-100 cursor-pointer",
           ].join(" ")}
         >
           <ChevronRight className="w-5 h-5" />

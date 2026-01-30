@@ -46,7 +46,7 @@ const TwoColumnSectionReverse = () => {
           {/* Right Column - Static Image */}
           <div className="order-2 lg:order-2 p-10">
             <div 
-              className="h-[600px] lg:h-[700px] w-auto overflow-hidden"
+              className="h-[400px] sm:h-[600px] lg:h-[700px] w-auto overflow-hidden"
               style={{
                 backgroundImage: 'url(/food.webp)',
                 backgroundSize: 'cover',

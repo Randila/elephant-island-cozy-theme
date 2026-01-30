@@ -81,28 +81,28 @@ export default function Home() {
       <TwoColumnSectionReverse />
 
     <ParallaxFeatureSection
-  bgImage="/beach.jpg"
-  cards={[
-    {
-      title: "Airport Pickups and Transfers",
-      desc: "Seamless arrival at Colombo Airport with private A/C vehicles and professional driver guides. We handle every transfer so your journey begins stress-free.",
-      img: "/pickup.jpg",
-      link: "#",
-    },
-    {
-      title: "Luxury Vehicles & Driver Guides",
-      desc: "Travel Sri Lanka in comfort with licensed English-speaking driver guides and modern A/C cars or mini-vans tailored to your group size.",
-      img: "/chauffeur.png",
-      link: "#",
-    },
-    {
-      title: "Tailor-Made Sri Lanka Tours",
-      desc: "Private itineraries crafted around your interests, budget, and travel style — from cultural highlights to beaches, wildlife and luxury escapes.",
-      img: "/surf.jpg",
-      link: "#",
-    },
-  ]}
-/>
+      bgImage="/beach.jpg"
+      cards={[
+        {
+          title: "Airport Pickups and Transfers",
+          desc: "Seamless arrival at Colombo Airport with private A/C vehicles and professional driver guides. We handle every transfer so your journey begins stress-free.",
+          img: "/pickup.jpg",
+          link: "#",
+        },
+        {
+          title: "Luxury Vehicles & Driver Guides",
+          desc: "Travel Sri Lanka in comfort with licensed English-speaking driver guides and modern A/C cars or mini-vans tailored to your group size.",
+          img: "/chauffeur.png",
+          link: "#",
+        },
+        {
+          title: "Tailor-Made Sri Lanka Tours",
+          desc: "Private itineraries crafted around your interests, budget, and travel style — from cultural highlights to beaches, wildlife and luxury escapes.",
+          img: "/surf.jpg",
+          link: "#",
+        },
+      ]}
+    />
 
 
       <NewsletterSection backgroundImageUrl="/stay.webp" />

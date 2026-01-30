@@ -14,7 +14,7 @@ const TwoColumnSection = () => {
               bgImage="/galle.jpg"
               bgImageAlt="Restaurant interior"
               strength={75}
-              className="h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
+              className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
             >
               <div className="h-full flex items-center justify-center">
                 {/* Optional: Add overlay or content here if needed */}
