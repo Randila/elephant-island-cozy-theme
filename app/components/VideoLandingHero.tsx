@@ -8,7 +8,7 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
         <h3 className="mb-8 font-marcellus">Elephant Island</h3>
         <h1 className="font-marcellus text-5xl md:text-7xl 2xl:text-8xl leading-[1.05]">
           Find the spirit of Ceylon
-          <br/> at the Elephant Island
+          <br className="hidden md:block"/> at the Elephant Island
         </h1>
         <div className="h-12 w-px bg-white/45 my-8"></div>
           {/* CTA Button */}
