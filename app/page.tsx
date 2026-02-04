@@ -17,8 +17,8 @@ export default function Home() {
     src: "/slider/slide-1.jpg",
     alt: "Beach sunset",
     badge: "SAVE OVER 15%",
-    title: "Elephant Island Explorer",
-    subtitle: "A private island-to-highlands journey",
+    title: "Sri Lanka's Highlights",
+    subtitle: "Travel to Colombo, Kandy & Bentota",
     href: "/packages/explorer",
   },
   {
@@ -84,14 +84,14 @@ export default function Home() {
       bgImage="/beach.jpg"
       cards={[
         {
-          title: "Airport Pickups and Transfers",
-          desc: "Seamless arrival at Colombo Airport with private A/C vehicles and professional driver guides. We handle every transfer so your journey begins stress-free.",
+          title: "Our Vehicles",
+          desc: "We Use Luxury A/C Cars For 2 Persons And Luxury A/C Mini-Vans For 3 + Persons.",
           img: "/pickup.jpg",
           link: "#",
         },
         {
-          title: "Luxury Vehicles & Driver Guides",
-          desc: "Travel Sri Lanka in comfort with licensed English-speaking driver guides and modern A/C cars or mini-vans tailored to your group size.",
+          title: "Our Driver Guides",
+          desc: "All Of Our Driver Guides Are Licensed By The Sri Lanka Tourist Board And Are Fluent In English And Other Languages.",
           img: "/chauffeur.png",
           link: "#",
         },

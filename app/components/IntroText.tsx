@@ -28,14 +28,16 @@ export default function IntroText() {
             sm:text-6xl
           "
         >
-          At the Edge of the Indian Ocean,
+          The World’s Most
           <br />
-          Endless Tropical Beauty
+          Beautiful Island
         </h2>
 
         {/* Paragraph */}
-        <p className="mx-auto mt-8 max-w-3xl text-[15px] leading-7 text-[#2e2e2e]/80">
-          Set along the breathtaking coastline of Sri Lanka, Elephant Island is a sanctuary of beauty, culture, and unforgettable journeys. From golden beaches to lush tropical landscapes, we curate private, tailor-made holidays designed to immerse you in the island’s magic — offering exceptional experiences for every traveller and every budget.
+        <p className="mx-auto mt-8 max-w-2xl text-base leading-7 text-[#2e2e2e]/80">
+          We are a group of travel experts that arrange fantastic private tailor
+          made holidays in Sri Lanka. We are happy to quote for travellers on
+          any budget that wish to experience Sri Lanka.
         </p>
       </div>
     </section>

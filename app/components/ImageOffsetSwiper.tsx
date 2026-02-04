@@ -74,7 +74,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                       className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40"
                     >
                       {/* image */}
-                      <div className="relative aspect-[2/3] w-full">
+                      <div className="relative aspect-9/16 lg:aspect-2/3 w-full">
                         <img
                           src={s.src}
                           alt={s.alt ?? s.title}
@@ -82,7 +82,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                           draggable={false}
                         />
                         {/* overlay for readability */}
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/10 to-black/60" />
+                        <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/15 via-black/10 to-black/60" />
                       </div>
 
                       {/* content overlay */}
@@ -90,7 +90,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                         {/* badge */}
                         {s.badge ? (
                           <p className="mb-auto mt-2 text-[11px] font-semibold tracking-[0.22em] text-white/80">
-                            {s.badge}
+                            3 Nights | 4 Days
                           </p>
                         ) : (
                           <div className="mb-auto mt-2 h-[14px]" />
