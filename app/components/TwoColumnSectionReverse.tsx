@@ -9,21 +9,21 @@ const TwoColumnSectionReverse = () => {
           {/* Left Column - Text Content */}
           <div className="order-1 lg:order-1 space-y-6">
                {/* Small Uppercase Heading */}
-            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600">
+            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600 text-center lg:text-left">
               OUR RESTAURANT
             </h3>
 
             {/* Main Heading */}
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900 text-center lg:text-left">
               Tailor Made Itineraries
             </h2>
 
             {/* Description Paragraphs */}
             <div className="space-y-4 xl:max-w-lg">
-              <p className="text-lg font-normal text-gray-700 leading-relaxed">
+              <p className="text-lg font-normal text-gray-700 leading-relaxed text-center lg:text-left">
                 Please contact us if you are interested in discussing a tailor-made itinerary with our travel experts, designed around your personal interests and requirements.
               </p>
-              <p className="text-lg font-norma text-gray-700 leading-relaxed">
+              <p className="text-lg font-normal text-gray-700 leading-relaxed text-center lg:text-left">
                  Every journey is privately curated to ensure a seamless, memorable Sri Lankan experience — crafted exclusively for you.
               </p>
             </div>

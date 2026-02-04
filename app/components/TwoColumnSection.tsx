@@ -23,23 +23,23 @@ const TwoColumnSection = () => {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="order-1 lg:order-2 space-y-6 md:max-w-lg 2xl:max-w-2xl">
+          <div className="order-1 lg:order-2 space-y-6 md:max-w-lg 2xl:max-w-2xl pt-12">
             {/* Small Uppercase Heading */}
-            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600">
+            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600 text-center lg:text-left">
               OUR RESTAURANT
             </h3>
 
             {/* Main Heading */}
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900 text-center lg:text-left">
               Sri Lanka’s Most Beautiful Island Escape
             </h2>
 
             {/* Description Paragraphs */}
             <div className="space-y-4 xl:max-w-lg">
-              <p className="text-lg font-normal text-gray-700 leading-relaxed">
+              <p className="text-lg font-normal text-gray-700 leading-relaxed text-center lg:text-left">
                 Discover tailor-made journeys across Sri Lanka, from golden beaches and lush jungles to vibrant culture and timeless heritage.
               </p>
-              <p className="text-lg font-norma text-gray-700 leading-relaxed">
+              <p className="text-lg font-normal text-gray-700 leading-relaxed text-center lg:text-left">
                 We craft private holidays for every traveler and every budget — delivering unforgettable island experiences with expert care.
               </p>
             </div>
