@@ -69,7 +69,7 @@ const TwoColumnSection = () => {
 
             {/* Main Heading */}
             <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900 text-center lg:text-left">
-              All the Essentials for a Cozy and Comfortable Stay
+              Cozy and Comfortable Stay
             </h2>
 
             {/* Services Grid */}
@@ -77,16 +77,14 @@ const TwoColumnSection = () => {
               {services.map(({ title, desc, Icon }) => (
                 <div key={title} className="flex gap-4">
                   <div className="shrink-0 pt-1">
-                    <div className="h-12 w-12 rounded-full bg-gray-50 flex items-center justify-center">
-                      <Icon className="h-6 w-6 text-[#b7925a]" />
-                    </div>
+                   <Icon className="h-6 w-6 text-[#b7925a]" />
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="font-marcellus text-xl lg:text-2xl text-gray-900">
+                    <h4 className="font-marcellus text-xl text-gray-900">
                       {title}
                     </h4>
-                    <p className="text-base text-gray-700 leading-relaxed">
+                    <p className="text-sm text-gray-700 leading-relaxed">
                       {desc}
                     </p>
                   </div>
