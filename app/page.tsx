@@ -8,6 +8,7 @@ import ParallaxFeatureSection from "./components/ParallaxFeatureSection";
 import SiteFooter from "./components/footer";
 import TwoColumnSection from "./components/TwoColumnSection";
 import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
+import Services from "./components/Services";
 
 export default function Home() {
   
@@ -104,6 +105,7 @@ export default function Home() {
       ]}
     />
 
+      <Services/>
 
       <NewsletterSection backgroundImageUrl="/stay.webp" />
       <SiteFooter />
