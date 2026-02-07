@@ -9,13 +9,14 @@ import SiteFooter from "./components/footer";
 import TwoColumnSection from "./components/TwoColumnSection";
 import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
 import Services from "./components/Services";
+import BookingHero from "./components/BookingHero";
 
 export default function Home() {
   
   const slides = [
   {
     id: "1",
-    src: "/slider/slide-1.jpg",
+    src: "/slider/tour1.jpeg",
     alt: "Beach sunset",
     badge: "SAVE OVER 15%",
     title: "Sri Lanka's Highlights",
@@ -87,23 +88,26 @@ export default function Home() {
         {
           title: "Our Vehicles",
           desc: "We Use Luxury A/C Cars For 2 Persons And Luxury A/C Mini-Vans For 3 + Persons.",
-          img: "/pickup.jpg",
+          img: "/byd-car.webp",
           link: "#",
         },
         {
           title: "Our Driver Guides",
           desc: "All Of Our Driver Guides Are Licensed By The Sri Lanka Tourist Board And Are Fluent In English And Other Languages.",
-          img: "/chauffeur.png",
+          img: "/guides.jpg",
           link: "#",
         },
         {
-          title: "Tailor-Made Sri Lanka Tours",
-          desc: "Private itineraries crafted around your interests, budget, and travel style — from cultural highlights to beaches, wildlife and luxury escapes.",
-          img: "/surf.jpg",
+          title: "Arrival At Colombo Airport",
+          desc: "Most visitors arrive at Colombo Airport - which is about 20 minutes by expressway to the capital city.",
+          img: "/emirates.jpeg",
           link: "#",
         },
       ]}
     />
+
+      <BookingHero backgroundImage="/road.jpg" />
+
 
       <Services/>
 

@@ -1,45 +1,39 @@
 "use client";
 
 import { Parallax } from "react-parallax";
-import {
-  CarTaxiFront,
-  Sparkles,
-  Wifi,
-  WashingMachine,
-  Coffee,
-  Waves,
+import { 
+  Users,
+  MapPin,
+  Building,
+  Car,
+  Calendar
 } from "lucide-react";
 
 const services = [
   {
-    title: "Airport Pick-up Service",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: CarTaxiFront,
+    title: "Group Tours",
+    desc: "We can arrange tours for any group size inclusive of vans and luxury coaches.",
+    Icon: Users,
   },
   {
-    title: "Housekeeper Services",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: Sparkles,
+    title: "Special Interest Holidays",
+    desc: "We organize specialist wildlife, birding, golfing holidays and more.",
+    Icon: MapPin,
   },
   {
-    title: "Wifi & Internet",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: Wifi,
+    title: "Hotel Bookings",
+    desc: "We guarantee to quote lower rates for any hotel in Sri Lanka.",
+    Icon: Building,
   },
   {
-    title: "Laundry Services",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: WashingMachine,
+    title: "Vehicles For Tours",
+    desc: "We provide fully licensed A/C vehicles with English speaking guides.",
+    Icon: Car,
   },
   {
-    title: "Breakfast in Bed",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: Coffee,
-  },
-  {
-    title: "Swimming Pool",
-    desc: "Lorem ipsum proin gravida velit auctor sde re sit amet space.",
-    Icon: Waves,
+    title: "Day Trips From Colombo",
+    desc: "Excursions to Sigiriya, Kandy, Galle from the capital city.",
+    Icon: Calendar,
   },
 ];
 
@@ -51,7 +45,7 @@ const TwoColumnSection = () => {
           {/* Left Column - Parallax Image */}
           <div className="order-2 lg:order-1 p-0 ">
             <Parallax
-              bgImage="/galle.jpg"
+              bgImage="/images/elephant.jpeg"
               bgImageAlt="Restaurant interior"
               strength={75}
               className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
@@ -69,7 +63,7 @@ const TwoColumnSection = () => {
 
             {/* Main Heading */}
             <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900 text-center lg:text-left">
-              Cozy and Comfortable Stay
+              Tourism Services We Offer In Sri Lanka
             </h2>
 
             {/* Services Grid */}

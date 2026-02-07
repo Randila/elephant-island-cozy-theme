@@ -1,5 +1,7 @@
 "use client";
 
+import { Parallax } from "react-parallax";
+
 const TwoColumnSectionReverse = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white">
@@ -40,20 +42,18 @@ const TwoColumnSectionReverse = () => {
             </div>
           </div>
 
-          {/* Right Column - Static Image */}
+          {/* Right Column - parallex Image */}
           <div className="order-2 lg:order-2 p-10">
-            <div
-              className="h-[400px] sm:h-[600px] lg:h-[700px] w-auto overflow-hidden"
-              style={{
-                backgroundImage: "url(/food.webp)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="h-full flex items-center justify-center">
-                {/* Optional: Add overlay or content here if needed */}
-              </div>
-            </div>
+            <Parallax
+                          bgImage="/images/ella.jpeg"
+                          bgImageAlt="Restaurant interior"
+                          strength={75}
+                          className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
+                        >
+                          <div className="h-full flex items-center justify-center">
+                            {/* Optional: Add overlay or content here if needed */}
+                          </div>
+                        </Parallax>
           </div>
         </div>
       </div>

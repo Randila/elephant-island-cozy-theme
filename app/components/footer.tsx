@@ -7,9 +7,9 @@ type FooterProps = {
 };
 
 export default function SiteFooter({
-  address = "73120 Courchevel 1850, France",
-  phone = "+41 22 345 67 88",
-  email = "reservation@cozystay.com",
+  address = "Nugegoda Business Center 80 Nawala Road, Nugegoda, Sri Lanka",
+  phone = "+94 77 707 2265",
+  email = "info@elephant-island.com",
 }: FooterProps) {
   return (
     <footer className="bg-[#0a0a0a] text-white/80">
@@ -71,10 +71,10 @@ export default function SiteFooter({
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
           <div className="text-sm text-white/60">
-            © Copyright CozyStay WordPress Theme for Hotel Booking.
+            © Copyright Elephant Island, Sri Lanka
           </div>
 
-          <div className="flex items-center gap-8 text-xs font-semibold tracking-[0.2em] text-white/60">
+          <div className="flex items-center gap-8 text-xs font-semibold tracking-[0.25em] text-white/40">
             <a className="hover:text-white" href="/privacy">
               PRIVACY
             </a>

@@ -28,69 +28,42 @@ export default function NewsletterSection({
     >
       <section className="relative">
         {/* overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/25" />
 
         {/* content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:py-32">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* LEFT */}
             <div>
-              <p className="text-xs font-semibold tracking-[0.25em] text-white/80">
-                STAY TUNED WITH COZYSTAY
+              <p className="text-sm font-semibold tracking-[0.25em] text-white/80">
+                Who We Are?
               </p>
 
               <h2 className="mt-6 font-marcellus text-2xl leading-[1.05] text-white sm:text-5xl lg:text-4xl">
-                Sign up for our newsletter to
-                <br />
-                receive our news, deals and
-                <br />
-                special offers.
+                Our company has so far hosted in excess of 35 000
+                visitors to Sri Lanka.
               </h2>
-            </div>
 
-            {/* RIGHT */}
-            <form onSubmit={handleSubmit} className="w-full">
-              <div className="flex items-end gap-6 border-b border-white/70">
-                <div className="w-full">
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your Email Address"
-                    className="w-full bg-transparent pb-3 text-white placeholder:text-white/60 outline-none"
-                  />
+
+              <div className="flex items-center gap-6 mt-6">
+                <img src="/atol.png" className="w-20" alt="" />
+                <div className="bg-white p-1 rounded">
+                  <img src="/topp.jpg" className="w-32" alt="" />
                 </div>
-
-                <button
-                  type="submit"
-                  className="group mb-1 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white"
-                >
-                  Subscribe
-                  
-                </button>
               </div>
 
-              <label className="mt-6 flex items-center gap-3 text-sm text-white/85">
-                <input
-                  type="checkbox"
-                  checked={agreed}
-                  onChange={(e) => setAgreed(e.target.checked)}
-                  className="h-4 w-4 accent-white"
-                />
-                <span>
-                  I agree to the{" "}
-                  <a
-                    href="/privacy"
-                    className="underline underline-offset-4 hover:text-white"
-                  >
-                    Privacy Policy
-                  </a>
-                </span>
-              </label>
-            </form>
+            </div>
+
+        
           </div>
         </div>
+
+        <div className="absolute bottom-6 left-6 lg:right-6">
+          <p className="text-xs font-semibold tracking-[0.25em] text-white">
+            Established Since 2003
+          </p>
+        </div>
+
       </section>
     </Parallax>
   );
