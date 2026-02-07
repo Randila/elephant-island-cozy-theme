@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 
 const TwoColumnSectionReverse = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white">
+    <section className="relative pb-20 flex items-center bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - Text Content */}
