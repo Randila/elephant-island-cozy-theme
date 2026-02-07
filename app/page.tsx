@@ -8,17 +8,19 @@ import ParallaxFeatureSection from "./components/ParallaxFeatureSection";
 import SiteFooter from "./components/footer";
 import TwoColumnSection from "./components/TwoColumnSection";
 import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
+import Services from "./components/Services";
+import BookingHero from "./components/BookingHero";
 
 export default function Home() {
   
   const slides = [
   {
     id: "1",
-    src: "/slider/slide-1.jpg",
+    src: "/slider/tour1.jpeg",
     alt: "Beach sunset",
     badge: "SAVE OVER 15%",
-    title: "Elephant Island Explorer",
-    subtitle: "A private island-to-highlands journey",
+    title: "Sri Lanka's Highlights",
+    subtitle: "Travel to Colombo, Kandy & Bentota",
     href: "/packages/explorer",
   },
   {
@@ -84,26 +86,30 @@ export default function Home() {
       bgImage="/beach.jpg"
       cards={[
         {
-          title: "Airport Pickups and Transfers",
-          desc: "Seamless arrival at Colombo Airport with private A/C vehicles and professional driver guides. We handle every transfer so your journey begins stress-free.",
-          img: "/pickup.jpg",
+          title: "Our Vehicles",
+          desc: "We Use Luxury A/C Cars For 2 Persons And Luxury A/C Mini-Vans For 3 + Persons.",
+          img: "/byd-car.webp",
           link: "#",
         },
         {
-          title: "Luxury Vehicles & Driver Guides",
-          desc: "Travel Sri Lanka in comfort with licensed English-speaking driver guides and modern A/C cars or mini-vans tailored to your group size.",
-          img: "/chauffeur.png",
+          title: "Our Driver Guides",
+          desc: "All Of Our Driver Guides Are Licensed By The Sri Lanka Tourist Board And Are Fluent In English And Other Languages.",
+          img: "/guides.jpg",
           link: "#",
         },
         {
-          title: "Tailor-Made Sri Lanka Tours",
-          desc: "Private itineraries crafted around your interests, budget, and travel style — from cultural highlights to beaches, wildlife and luxury escapes.",
-          img: "/surf.jpg",
+          title: "Arrival At Colombo Airport",
+          desc: "Most visitors arrive at Colombo Airport - which is about 20 minutes by expressway to the capital city.",
+          img: "/emirates.jpeg",
           link: "#",
         },
       ]}
     />
 
+      <BookingHero backgroundImage="/road.jpg" />
+
+
+      <Services/>
 
       <NewsletterSection backgroundImageUrl="/stay.webp" />
       <SiteFooter />

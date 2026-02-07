@@ -87,7 +87,9 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b ${scrollY > 800 ? "border-slate-200" : "border-slate-50/20"} ${navbarClasses}`}
+        className={`fixed top-0 left-0 right-0 z-50 border-b ${
+          scrollY > 800 ? "border-slate-200" : "border-slate-50/20"
+        } ${navbarClasses}`}
       >
         <nav className="mx-auto max-w-[1400px] px-4 sm:px-6">
           <div
@@ -95,8 +97,9 @@ export default function Navbar() {
               scrollY > 100 ? "h-12" : "h-16"
             } grid grid-cols-3 items-center transition-all duration-300 ease-in-out`}
           >
-            <div className="flex items-center gap-5">
-              {/* Mobile burger */}
+            {/* LEFT (mobile: Book) (desktop: Links) */}
+            <div className="flex items-center gap-5 order-3 md:order-1 justify-end md:justify-start">
+              {/* Mobile burger (RIGHT on mobile) */}
               <button
                 type="button"
                 aria-label="Open menu"
@@ -129,8 +132,8 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Center Logo */}
-            <div className="flex justify-center">
+            {/* CENTER Logo */}
+            <div className="flex justify-center order-2">
               <Link
                 id="nav-logo"
                 href="/"
@@ -145,8 +148,8 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Book button */}
-            <div className="flex justify-end">
+            {/* RIGHT (mobile: Book LEFT) (desktop: Book RIGHT) */}
+            <div className="flex order-1 md:order-3 justify-start md:justify-end">
               <Link
                 href="#book"
                 className={`rounded-full p-4 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
@@ -168,16 +171,15 @@ export default function Navbar() {
         aria-hidden={!isMenuOpen}
       />
 
-      {/* MOBILE SIDEBAR (exact layout) */}
+      {/* MOBILE SIDEBAR */}
       <aside
         id="mobile-sidebar"
         aria-hidden={!isMenuOpen}
-        className={`fixed left-0 top-0 z-[70] h-dvh w-[88vw] max-w-[460px] md:hidden
-        bg-[#f3efe8] text-[#2a1c14]
-        transition-transform duration-300 ease-out
-        ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed right-0 top-0 z-[70] h-dvh w-[88vw] max-w-[460px] md:hidden
+  bg-[#f3efe8] text-[#2a1c14]
+  transition-transform duration-300 ease-out
+  ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* Make the whole panel a column with footer pinned to bottom */}
         <div className="flex h-full flex-col">
           {/* TOP */}
           <div className="px-8 pt-6">
@@ -185,9 +187,9 @@ export default function Navbar() {
               type="button"
               aria-label="Close menu"
               onClick={closeMenu}
-              className="inline-flex h-10 w-10 items-center justify-center hover:opacity-80 transition"
+              className="inline-flex h-10 items-center justify-end w-full hover:opacity-80 transition"
             >
-              <span className="relative h-4 w-4">
+              <span className="relative h-5 w-5">
                 <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[#2a1c14]/70" />
                 <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-[#2a1c14]/70" />
               </span>
@@ -212,10 +214,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* This spacer pushes the middle section down, keeping footer always at bottom */}
           <div className="flex-1" />
 
-          {/* MIDDLE (above footer) */}
+          {/* MIDDLE */}
           <div className="border-t border-[#2a1c14]/15">
             <div className="px-8 py-10">
               <div className="grid grid-cols-2 gap-12">
@@ -242,7 +243,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* FOOTER pinned bottom (star ratings) */}
+          {/* FOOTER pinned bottom */}
           <div className="border-t border-[#2a1c14]/15 px-8 py-4">
             <div className="flex items-center justify-between text-[13px] text-[#2a1c14]/55">
               <div className="flex items-center gap-3">

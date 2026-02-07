@@ -7,8 +7,8 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
         <img src="/elephant.png" className="w-10 invert" alt="" />
         <h3 className="mb-8 font-marcellus">Elephant Island</h3>
         <h1 className="font-marcellus text-5xl md:text-7xl 2xl:text-8xl leading-[1.05]">
-          Find the spirit of Ceylon
-          <br className="hidden md:block"/> at the Elephant Island
+          Amazing Holidays
+          <br className="hidden md:block"/> in Sri Lanka
         </h1>
         <div className="h-12 w-px bg-white/45 my-8"></div>
           {/* CTA Button */}
@@ -16,7 +16,7 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
               <button className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-marcellus font-medium text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-all duration-300 overflow-hidden cursor-pointer">
                 
                 {/* Button text */}
-                <span className="px-4">Explore our Tours</span>
+                <span className="px-4">Enquire</span>
                 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-none group-hover:transition-transform group-hover:duration-700" />

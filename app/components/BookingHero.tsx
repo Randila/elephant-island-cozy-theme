@@ -1,0 +1,353 @@
+"use client";
+
+import React, { useMemo, useState } from "react";
+import { Parallax } from "react-parallax";
+
+/** Put this OUTSIDE the component (same file) */
+const COUNTRIES = [
+  "Sri Lanka",
+  "India",
+  "United Kingdom",
+  "United States",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Netherlands",
+  "UAE",
+  "Saudi Arabia",
+  "Qatar",
+  "Singapore",
+  "Malaysia",
+  "Japan",
+  "China",
+  "South Korea",
+  "Thailand",
+  "Indonesia",
+];
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  travellingWith: "" | "partner" | "family" | "friends" | "solo";
+  accommodation: "" | "budget" | "standard" | "firstClass" | "luxury";
+  details: string;
+  country: string;
+};
+
+const inputClass =
+  "mt-2 w-full bg-transparent text-white/90 placeholder:text-white/40 outline-none";
+const fieldWrapClass = "border border-[#B8A77C]/60 p-3";
+
+export default function BookingHero({
+  backgroundImage,
+}: {
+  backgroundImage: string;
+}) {
+  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [form, setForm] = useState<FormData>({
+    name: "",
+    email: "",
+    phone: "",
+    travellingWith: "",
+    accommodation: "",
+    details: "",
+    country: "",
+  });
+
+  const steps = useMemo(
+    () => [
+      { id: 1 as const, title: "Your Details", subtitle: "Tell us who you are" },
+      { id: 2 as const, title: "Trip Preferences", subtitle: "Help us tailor it" },
+      { id: 3 as const, title: "Travel Info", subtitle: "Final details" },
+    ],
+    []
+  );
+
+  const current = steps.find((s) => s.id === step)!;
+
+  function set<K extends keyof FormData>(key: K, value: FormData[K]) {
+    setForm((p) => ({ ...p, [key]: value }));
+  }
+
+  function next() {
+    if (step < 3) setStep((s) => (s + 1) as 1 | 2 | 3);
+  }
+  function prev() {
+    if (step > 1) setStep((s) => (s - 1) as 1 | 2 | 3);
+  }
+
+  function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    // TODO: send form to your API / email service
+    console.log("Enquiry:", form);
+  }
+
+  return (
+    <section className="relative w-full">
+      <Parallax
+        bgImage={backgroundImage}
+        bgImageAlt="Hero background"
+        strength={50}
+        className="min-h-[85vh]"
+      >
+        {/* Parallax needs height from inner content */}
+        <div className="relative min-h-[85vh] z-30">
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/35" />
+
+          <div className="relative mx-auto flex min-h-[85vh] max-w-7xl items-center px-4 py-16 md:px-6">
+            <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+              {/* Left text */}
+              <div className="lg:col-span-7 text-center p-4 lg:text-left">
+                <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-white/90 md:text-sm">
+                  BEST PLACE FOR RELAX
+                </p>
+
+                <h1 className="font-marcellus text-5xl leading-[1.02] text-white md:text-7xl">
+                  Start Planning Your Travel
+                </h1>
+
+                <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+                  Nestled in scenic island escapes, Elephant Island Cozy is a
+                  boutique stay designed for slow mornings, golden sunsets, and
+                  unforgettable moments — close to the coast, culture, and the
+                  places you’ll love exploring.
+                </p>
+              </div>
+
+              {/* Right booking card */}
+              <div className="lg:col-span-5 lg:flex lg:justify-end">
+                <div className="w-full max-w-md bg-[#2E3B36]/85 backdrop-blur md:p-2">
+                  <div className="border border-[#B8A77C]/70 p-6 md:p-8">
+                    <p className="text-center text-xs font-semibold tracking-[0.22em] text-white/85">
+                      PLAN YOUR TRIP
+                    </p>
+                    <h2 className="mt-3 text-center font-marcellus text-4xl text-white md:text-3xl">
+                      ENQUIRE NOW
+                    </h2>
+
+                    {/* Step header */}
+                    <div className="mt-6">
+                      <div className="flex items-center justify-between text-xs text-white/70">
+                        <span>
+                          Step {step} of 3
+                        </span>
+                        <span className="font-semibold text-white/80">
+                          {current.title}
+                        </span>
+                      </div>
+
+                      {/* Progress bar */}
+                      <div className="mt-2 h-1 w-full bg-white/10">
+                        <div
+                          className="h-1 bg-[#B8A77C]"
+                          style={{ width: `${(step / 3) * 100}%` }}
+                        />
+                      </div>
+
+                      <p className="mt-2 text-sm text-white/75">
+                        {current.subtitle}
+                      </p>
+                    </div>
+
+                    <form className="mt-6 space-y-4" onSubmit={onSubmit}>
+                      {/* STEP 1: Your Details (3 fields) */}
+                      {step === 1 && (
+                        <>
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Your Name<span className="text-white/70">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              value={form.name}
+                              onChange={(e) => set("name", e.target.value)}
+                              placeholder="Enter your name"
+                              className={inputClass}
+                            />
+                          </div>
+
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Your E-Mail<span className="text-white/70">*</span>
+                            </label>
+                            <input
+                              type="email"
+                              required
+                              value={form.email}
+                              onChange={(e) => set("email", e.target.value)}
+                              placeholder="Enter your email"
+                              className={inputClass}
+                            />
+                          </div>
+
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Your Phone / WhatsApp
+                            </label>
+                            <input
+                              type="tel"
+                              value={form.phone}
+                              onChange={(e) => set("phone", e.target.value)}
+                              placeholder="+94 7X XXX XXXX"
+                              className={inputClass}
+                            />
+                          </div>
+                        </>
+                      )}
+
+                      {/* STEP 2: Trip Preferences (3 fields) */}
+                      {step === 2 && (
+                        <>
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Who Will You Be Travelling With?
+                            </label>
+                            <select
+                              value={form.travellingWith}
+                              onChange={(e) =>
+                                set(
+                                  "travellingWith",
+                                  e.target.value as FormData["travellingWith"]
+                                )
+                              }
+                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                            >
+                              <option className="text-black" value="">
+                                Select
+                              </option>
+                              <option className="text-black" value="partner">
+                                Partner
+                              </option>
+                              <option className="text-black" value="family">
+                                Family
+                              </option>
+                              <option className="text-black" value="friends">
+                                Friends
+                              </option>
+                              <option className="text-black" value="solo">
+                                Solo
+                              </option>
+                            </select>
+                          </div>
+
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Standard Of Accommodation
+                            </label>
+                            <select
+                              value={form.accommodation}
+                              onChange={(e) =>
+                                set(
+                                  "accommodation",
+                                  e.target.value as FormData["accommodation"]
+                                )
+                              }
+                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                            >
+                              <option className="text-black" value="">
+                                Select
+                              </option>
+                              <option className="text-black" value="budget">
+                                Budget
+                              </option>
+                              <option className="text-black" value="standard">
+                                Standard (3 Star)
+                              </option>
+                              <option className="text-black" value="firstClass">
+                                First Class (4/5 Star)
+                              </option>
+                              <option className="text-black" value="luxury">
+                                Luxury
+                              </option>
+                            </select>
+                          </div>
+
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Your Country
+                            </label>
+                            <select
+                              value={form.country}
+                              onChange={(e) => set("country", e.target.value)}
+                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                            >
+                              <option className="text-black" value="">
+                                Select country
+                              </option>
+                              {COUNTRIES.map((c) => (
+                                <option key={c} className="text-black" value={c}>
+                                  {c}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </>
+                      )}
+
+                      {/* STEP 3: Travel Info (1 field, but still 3 “questions” via placeholder prompts) */}
+                      {step === 3 && (
+                        <>
+                          <div className={fieldWrapClass}>
+                            <label className="block font-marcellus text-sm text-white">
+                              Tell Us As Much As Possible
+                            </label>
+                            <textarea
+                              rows={6}
+                              value={form.details}
+                              onChange={(e) => set("details", e.target.value)}
+                              placeholder={
+                                "1) Your dates of travel: MM/YY or DD/MM/YY\n2) How many people are travelling?\n3) If with kids: number & ages?"
+                              }
+                              className="mt-2 w-full resize-none bg-transparent text-white/90 placeholder:text-white/40 outline-none"
+                            />
+                          </div>
+                        </>
+                      )}
+
+                      {/* Buttons */}
+                      <div className="mt-2 flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={prev}
+                          disabled={step === 1}
+                          className="w-1/3 border border-[#B8A77C]/70 py-3 text-center font-medium text-white/90 transition disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
+                        >
+                          Back
+                        </button>
+
+                        {step < 3 ? (
+                          <button
+                            type="button"
+                            onClick={next}
+                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                          >
+                            Next
+                          </button>
+                        ) : (
+                          <button
+                            type="submit"
+                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                          >
+                            Send Enquiry
+                          </button>
+                        )}
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* overlay */}
+        <div className="absolute inset-0 bg-linear-to-r from-black/50 via-black/25 to-transparent z-10" />
+      </Parallax>
+    </section>
+  );
+}
