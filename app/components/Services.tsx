@@ -1,13 +1,7 @@
 "use client";
 
 import { Parallax } from "react-parallax";
-import { 
-  Users,
-  MapPin,
-  Building,
-  Car,
-  Calendar
-} from "lucide-react";
+import { Users, MapPin, Building, Car, Calendar } from "lucide-react";
 
 const services = [
   {
@@ -39,7 +33,7 @@ const services = [
 
 const TwoColumnSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white py-20">
+    <section className="relative py-20 flex items-center bg-white py-20">
       <div className="container mx-auto px-6 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Parallax Image */}
@@ -71,7 +65,7 @@ const TwoColumnSection = () => {
               {services.map(({ title, desc, Icon }) => (
                 <div key={title} className="flex gap-4">
                   <div className="shrink-0 pt-1">
-                   <Icon className="h-6 w-6 text-[#b7925a]" />
+                    <Icon className="h-6 w-6 text-[#b7925a]" />
                   </div>
 
                   <div className="space-y-2">
@@ -85,8 +79,6 @@ const TwoColumnSection = () => {
                 </div>
               ))}
             </div>
-
-         
           </div>
         </div>
       </div>
