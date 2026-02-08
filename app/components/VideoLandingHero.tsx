@@ -4,7 +4,7 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
       <video className="absolute inset-0 h-full w-full object-cover" src={videoSrc} autoPlay muted loop playsInline />
       <div className="absolute inset-0 bg-black/35" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
-        <img src="/elephant.png" className="w-10 invert" alt="" />
+        <img src="/main-logo.png" className="w-16 grayscale" alt="" />
         <h3 className="mb-8 font-marcellus">Elephant Island</h3>
         <h1 className="font-marcellus text-5xl md:text-7xl 2xl:text-8xl leading-[1.05]">
           Amazing Holidays

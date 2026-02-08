@@ -6,15 +6,15 @@ export default function IntroText() {
       <div className="mx-auto max-w-5xl px-4 text-center">
         {/* Icon */}
         <div className="mx-auto flex items-center justify-center">
-          <div className="h-12 w-12 text-[#55624f]">
+          <div className="w-16 text-[#55624f]">
             {/* simple resort icon (inline svg) */}
-            <img src="/resort.png" alt="" />
+            <img src="/main-logo.png" className="grayscale" alt="" />
           </div>
         </div>
 
         {/* Small top label */}
         <p className="mt-3 text-xs tracking-[0.22em] font-semibold text-[#55624f] uppercase">
-          Welcome to Elephant Island
+          Welcome to Sri Lanka
         </p>
 
         {/* Big heading */}

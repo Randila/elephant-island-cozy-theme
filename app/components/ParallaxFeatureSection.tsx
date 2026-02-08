@@ -46,7 +46,7 @@ export default function ParallaxFeatureSection({
         className="relative"
       >
         {/* Height of parallax hero */}
-        <div className="relative h-[55dvh] md:h-screen">
+        <div className="relative h-[75dvh] md:h-screen">
           {/* dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
 
@@ -102,16 +102,6 @@ export default function ParallaxFeatureSection({
                     {c.desc}
                   </p>
 
-                  {/* link */}
-                  <a
-                    href={c.link ?? "#"}
-                    className="mt-5 inline-block text-[13px] text-[#1b1b1b]/70 hover:text-[#1b1b1b]"
-                  >
-                    <span className="relative">
-                      Discover More
-                      <span className="absolute left-1/2 top-[110%] h-[1px] w-20 -translate-x-1/2 bg-[#c8b08a]" />
-                    </span>
-                  </a>
                 </div>
               ))}
             </div>
