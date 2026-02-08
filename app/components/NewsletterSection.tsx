@@ -40,10 +40,9 @@ export default function NewsletterSection({
               </p>
 
               <h2 className="mt-6 font-marcellus text-2xl leading-[1.05] text-white sm:text-5xl lg:text-4xl">
-                Our company has so far hosted in excess of 35 000
-                visitors to Sri Lanka.
+                Our company has so far hosted in excess of 35 000 visitors to
+                Sri Lanka.
               </h2>
-
 
               <div className="flex items-center gap-6 mt-6">
                 <img src="/atol.png" className="w-20" alt="" />
@@ -52,9 +51,10 @@ export default function NewsletterSection({
                 </div>
               </div>
 
+              <p className="text-white mt-6 text-sm">
+                Elephant Island Is A Brand Name Of Sri Lanka In Luxury Ltd.
+              </p>
             </div>
-
-        
           </div>
         </div>
 
@@ -63,7 +63,6 @@ export default function NewsletterSection({
             Established Since 2003
           </p>
         </div>
-
       </section>
     </Parallax>
   );

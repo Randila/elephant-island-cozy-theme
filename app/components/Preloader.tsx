@@ -197,9 +197,7 @@ export default function Preloader({
           y: "-50%",
         }}
       >
-        <div className="font-marcellus text-[10px] tracking-[0.35em] uppercase text-black/60">
-          THE
-        </div>
+        
         <div className="font-marcellus text-lg tracking-[0.22em] text-black/90">
           {logoTextTop} {logoTextBottom}
         </div>

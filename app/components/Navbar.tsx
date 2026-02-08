@@ -139,9 +139,7 @@ export default function Navbar() {
                 href="/"
                 className={`${textClasses} text-center leading-none select-none`}
               >
-                <div className="font-marcellus text-[10px] tracking-[0.35em] uppercase opacity-70">
-                  THE
-                </div>
+              
                 <div className="font-marcellus tracking-[0.22em] text-sm md:text-base">
                   ELEPHANT ISLAND
                 </div>
@@ -154,8 +152,8 @@ export default function Navbar() {
                 href="#book"
                 className={`rounded-full p-4 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
               >
-                <span className="inline md:hidden">Book</span>
-                <span className="hidden md:inline">Book Your Stay</span>
+                <span className="inline md:hidden">Contact</span>
+                <span className="hidden md:inline">Contact Now</span>
               </Link>
             </div>
           </div>

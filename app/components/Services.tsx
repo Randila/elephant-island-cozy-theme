@@ -50,10 +50,8 @@ const TwoColumnSection = () => {
 
           {/* Right Column - Text Content */}
           <div className="order-1 lg:order-2 space-y-10 py-8 lg:pt-12">
-            {/* Small Uppercase Heading */}
-            <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600 text-center lg:text-left">
-              Discover the services we offered
-            </h3>
+           
+           
 
             {/* Main Heading */}
             <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-marcellus text-gray-900 text-center lg:text-left">

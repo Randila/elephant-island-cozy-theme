@@ -48,7 +48,7 @@ const TwoColumnSection = () => {
                 {/* Button text */}
                 <span className="px-4">Contact Us</span>
 
-                <img src="/elephant.png" className="invert w-8" alt="" />
+                <img src="/main-logo.png" className="grayscale w-8" alt="" />
 
                 {/* Hover effect overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-none group-hover:transition-transform group-hover:duration-700" />
