@@ -55,20 +55,19 @@ export default function Navbar() {
   const burgerLine2 = isPastHero ? "bg-gray-600" : "bg-white/65";
 
   const primaryLinks = [
-    { label: "Stay", href: "#stay" },
-    { label: "Dining", href: "#dining" },
-    { label: "Relax", href: "#relax" },
-    { label: "Discover", href: "#discover" },
+    { label: "Home", href: "" },
+    { label: "Tours", href: "tours" },
+    { label: "About", href: "about" },
   ];
 
   const menuGroups: MenuGroup[] = [
     {
       title: "Stay",
       items: [
-        { label: "Garden Villa", href: "#garden-villa" },
-        { label: "Pool Studio", href: "#pool-studio" },
-        { label: "Pool Villa", href: "#pool-villa" },
-        { label: "Master Pool Villa", href: "#master-pool-villa" },
+        { label: "Garden Villa", href: "garden-villa" },
+        { label: "Pool Studio", href: "pool-studio" },
+        { label: "Pool Villa", href: "pool-villa" },
+        { label: "Master Pool Villa", href: "master-pool-villa" },
       ],
     },
     {

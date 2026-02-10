@@ -76,7 +76,11 @@ export default function Home() {
       <Navbar />
       <VideoLandingHero videoSrc="/header-video.mp4" />
 
-      <IntroText />
+      <IntroText 
+        label="Welcome to Sri Lanka"
+        title="The World's Most Beautiful Island"
+        description="We are a group of travel experts that arrange fantastic private tailor made holidays in Sri Lanka. We are happy to quote for travellers on any budget that wish to experience Sri Lanka."
+      />
       <OutstandingViewsSwiper slides={slides} />
 
       <TwoColumnSection />
