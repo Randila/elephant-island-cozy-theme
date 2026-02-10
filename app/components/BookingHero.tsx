@@ -3,28 +3,200 @@
 import React, { useMemo, useState } from "react";
 import { Parallax } from "react-parallax";
 
-/** Put this OUTSIDE the component (same file) */
 const COUNTRIES = [
-  "Sri Lanka",
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
   "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
   "United Kingdom",
   "United States",
-  "Canada",
-  "Australia",
-  "Germany",
-  "France",
-  "Italy",
-  "Netherlands",
-  "UAE",
-  "Saudi Arabia",
-  "Qatar",
-  "Singapore",
-  "Malaysia",
-  "Japan",
-  "China",
-  "South Korea",
-  "Thailand",
-  "Indonesia",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
 ];
 
 type FormData = {
@@ -59,11 +231,19 @@ export default function BookingHero({
 
   const steps = useMemo(
     () => [
-      { id: 1 as const, title: "Your Details", subtitle: "Tell us who you are" },
-      { id: 2 as const, title: "Trip Preferences", subtitle: "Help us tailor it" },
+      {
+        id: 1 as const,
+        title: "Your Details",
+        subtitle: "Tell us who you are",
+      },
+      {
+        id: 2 as const,
+        title: "Trip Preferences",
+        subtitle: "Help us tailor it",
+      },
       { id: 3 as const, title: "Travel Info", subtitle: "Final details" },
     ],
-    []
+    [],
   );
 
   const current = steps.find((s) => s.id === step)!;
@@ -132,9 +312,7 @@ export default function BookingHero({
                     {/* Step header */}
                     <div className="mt-6">
                       <div className="flex items-center justify-between text-xs text-white/70">
-                        <span>
-                          Step {step} of 3
-                        </span>
+                        <span>Step {step} of 3</span>
                         <span className="font-semibold text-white/80">
                           {current.title}
                         </span>
@@ -173,7 +351,8 @@ export default function BookingHero({
 
                           <div className={fieldWrapClass}>
                             <label className="block font-marcellus text-sm text-white">
-                              Your E-Mail<span className="text-white/70">*</span>
+                              Your E-Mail
+                              <span className="text-white/70">*</span>
                             </label>
                             <input
                               type="email"
@@ -212,7 +391,7 @@ export default function BookingHero({
                               onChange={(e) =>
                                 set(
                                   "travellingWith",
-                                  e.target.value as FormData["travellingWith"]
+                                  e.target.value as FormData["travellingWith"],
                                 )
                               }
                               className="mt-2 w-full bg-transparent text-white/90 outline-none"
@@ -244,7 +423,7 @@ export default function BookingHero({
                               onChange={(e) =>
                                 set(
                                   "accommodation",
-                                  e.target.value as FormData["accommodation"]
+                                  e.target.value as FormData["accommodation"],
                                 )
                               }
                               className="mt-2 w-full bg-transparent text-white/90 outline-none"
@@ -280,7 +459,11 @@ export default function BookingHero({
                                 Select country
                               </option>
                               {COUNTRIES.map((c) => (
-                                <option key={c} className="text-black" value={c}>
+                                <option
+                                  key={c}
+                                  className="text-black"
+                                  value={c}
+                                >
                                   {c}
                                 </option>
                               ))}

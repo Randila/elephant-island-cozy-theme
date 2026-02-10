@@ -1,20 +1,31 @@
 import React from "react";
 
-export default function IntroText() {
+interface IntroTextProps {
+  icon?: string;
+  label: string;
+  title: string;
+  description: string;
+}
+
+export default function IntroText({
+  icon = "/main-logo.png",
+  label,
+  title,
+  description,
+}: IntroTextProps) {
   return (
-    <section className="w-full bg-[#f7f5ef] pt-14 pb-10">
+    <section className="w-full bg-white pt-14 pb-10">
       <div className="mx-auto max-w-5xl px-4 text-center">
         {/* Icon */}
         <div className="mx-auto flex items-center justify-center">
-          <div className="w-16 text-[#55624f]">
-            {/* simple resort icon (inline svg) */}
-            <img src="/main-logo.png" className="grayscale" alt="" />
+          <div className="w-12 text-[#55624f]">
+            <img src={icon} className="grayscale" alt="" />
           </div>
         </div>
 
         {/* Small top label */}
         <p className="mt-3 text-xs tracking-[0.22em] font-semibold text-[#55624f] uppercase">
-          Welcome to Sri Lanka
+          {label}
         </p>
 
         {/* Big heading */}
@@ -26,18 +37,16 @@ export default function IntroText() {
             leading-[0.95]
             text-4xl
             sm:text-6xl
+            max-w-2xl
+            mx-auto
           "
         >
-          The World’s Most
-          <br />
-          Beautiful Island
+          {title}
         </h2>
 
         {/* Paragraph */}
         <p className="mx-auto mt-8 max-w-2xl text-base leading-7 text-[#2e2e2e]/80">
-          We are a group of travel experts that arrange fantastic private tailor
-          made holidays in Sri Lanka. We are happy to quote for travellers on
-          any budget that wish to experience Sri Lanka.
+          {description}
         </p>
       </div>
     </section>
