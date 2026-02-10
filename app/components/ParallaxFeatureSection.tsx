@@ -46,7 +46,7 @@ export default function ParallaxFeatureSection({
         className="relative"
       >
         {/* Height of parallax hero */}
-        <div className="relative h-[75dvh] md:h-screen">
+        <div className="relative h-[75dvh] lg:h-screen">
           {/* dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
 
@@ -79,7 +79,7 @@ export default function ParallaxFeatureSection({
         {/* Pull cards upward to overlap parallax */}
         <div className="-mt-28 sm:-mt-64">
           <div className="mx-auto max-w-7xl px-4">
-            <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
               {cards.map((c) => (
                 <div key={c.title} className="text-center">
                   {/* image frame */}

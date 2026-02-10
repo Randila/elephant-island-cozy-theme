@@ -43,17 +43,19 @@ const TwoColumnSectionReverse = () => {
           </div>
 
           {/* Right Column - parallex Image */}
-          <div className="order-2 lg:order-2 p-10">
-            <Parallax
-                          bgImage="/images/ella.jpeg"
-                          bgImageAlt="Restaurant interior"
-                          strength={75}
-                          className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
-                        >
-                          <div className="h-full flex items-center justify-center">
-                            {/* Optional: Add overlay or content here if needed */}
-                          </div>
-                        </Parallax>
+          <div className="order-2 lg:order-2 lg:p-10">
+           <Parallax
+              bgImage="/images/ella.jpeg"
+              bgImageAlt="Restaurant interior"
+              strength={75}
+              className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden hidden xl:block"
+            >
+              <div className="h-full flex items-center justify-center">
+                {/* Optional: Add overlay or content here if needed */}
+              </div>
+            </Parallax>
+
+            <img src="/images/ella.jpeg" className="xl:hidden" alt="" />
           </div>
         </div>
       </div>

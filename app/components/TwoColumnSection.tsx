@@ -8,21 +8,23 @@ const TwoColumnSection = () => {
       <div className="container mx-auto px-6 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - Parallax Image */}
-          <div className="order-2 lg:order-1 p-10">
+          <div className="order-2 lg:order-1 lg:p-10">
             <Parallax
               bgImage="/images/river.jpeg"
               bgImageAlt="Restaurant interior"
               strength={75}
-              className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"
+              className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden hidden xl:block"
             >
               <div className="h-full flex items-center justify-center">
                 {/* Optional: Add overlay or content here if needed */}
               </div>
             </Parallax>
+
+            <img src="/images/river.jpeg" className="xl:hidden" alt="" />
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="order-1 lg:order-2 space-y-6 md:max-w-lg 2xl:max-w-2xl pt-12">
+          <div className="order-1 lg:order-2 space-y-6">
             {/* Small Uppercase Heading */}
             <h3 className="text-sm font-semibold tracking-widest uppercase text-gray-600 text-center lg:text-left">
               Tailor Made Itineraries
