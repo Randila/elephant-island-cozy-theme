@@ -10,10 +10,10 @@ export default function Contact() {
     <>
     <Navbar />
         <HotelHeroSection
-        title="Contact The Hotel"
+        title="Contact Us"
         subtitle="Get in touch with us for your perfect island getaway"
         tagline="WE'RE HERE TO HELP"
-        backgroundImage="/beach.jpg"
+        backgroundImage="/contact.jpg"
       />
       <ContactSplitSection/>
 

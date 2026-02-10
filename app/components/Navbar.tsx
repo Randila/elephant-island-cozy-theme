@@ -55,27 +55,34 @@ export default function Navbar() {
   const burgerLine2 = isPastHero ? "bg-gray-600" : "bg-white/65";
 
   const primaryLinks = [
-    { label: "Home", href: "" },
-    { label: "Tours", href: "tours" },
-    { label: "About", href: "about" },
+    { label: "Home", href: "/" },
+    { label: "Tours", href: "/tours" },
+    { label: "About", href: "/about" },
+  ];
+
+  const mobileLinks = [
+    { label: "Home", href: "/" },
+    { label: "Tours", href: "/tours" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const menuGroups: MenuGroup[] = [
     {
       title: "Stay",
       items: [
-        { label: "Garden Villa", href: "garden-villa" },
-        { label: "Pool Studio", href: "pool-studio" },
-        { label: "Pool Villa", href: "pool-villa" },
-        { label: "Master Pool Villa", href: "master-pool-villa" },
+        { label: "Golden Crown", href: "golden-crown" },
+        { label: "Elephant Stables", href: "elephant-stables" },
+        { label: "Uga Riva", href: "uga-riva" },
+        { label: "Tintagal Colombo", href: "tintagal-colombo" },
       ],
     },
     {
       title: "Discover",
       items: [
-        { label: "Secret Waterfalls", href: "#secret-waterfalls" },
-        { label: "Dolphins of Lovina", href: "#dolphins" },
-        { label: "Ceremonies", href: "#ceremonies" },
+        { label: "Sri Lankan Culture", href: "#" },
+        { label: "Historic Sites", href: "#" },
+        { label: "Traditional Food", href: "#" },
       ],
     },
   ];
@@ -148,7 +155,7 @@ export default function Navbar() {
             {/* RIGHT (mobile: Book LEFT) (desktop: Book RIGHT) */}
             <div className="flex order-1 md:order-3 justify-start md:justify-end">
               <Link
-                href="#book"
+                href="/contact"
                 className={`rounded-full p-4 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
               >
                 <span className="inline md:hidden">Contact</span>
@@ -198,7 +205,7 @@ export default function Navbar() {
 
             {/* Big links */}
             <div className="mt-6 space-y-3 font-marcellus">
-              {primaryLinks.map((l) => (
+              {mobileLinks.map((l) => (
                 <Link
                   key={l.label}
                   href={l.href}
@@ -224,14 +231,23 @@ export default function Navbar() {
                     </div>
                     <div className="mt-5 space-y-4 text-[15px] text-[#2a1c14]/75">
                       {g.items.map((it) => (
-                        <Link
-                          key={it.label}
-                          href={it.href}
-                          onClick={closeMenu}
-                          className="block hover:text-[#2a1c14] transition"
-                        >
-                          {it.label}
-                        </Link>
+                        g.title === "Discover" ? (
+                          <span
+                            key={it.label}
+                            className="block"
+                          >
+                            {it.label}
+                          </span>
+                        ) : (
+                          <Link
+                            key={it.label}
+                            href={it.href}
+                            onClick={closeMenu}
+                            className="block hover:text-[#2a1c14] transition"
+                          >
+                            {it.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>

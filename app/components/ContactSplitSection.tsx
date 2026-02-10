@@ -16,25 +16,25 @@ export default function ContactSplitSection() {
         title: "Accommodation",
         subtitle: "Enquiries & Bookings",
         phone: "+679 345 7788",
-        email: "stay@cozystay.com",
+        email: "stay@elis.com",
       },
       {
         title: "Restaurants",
         subtitle: "Enquiries & Bookings",
         phone: "+679 345 2255",
-        email: "dine@cozystay.com",
+        email: "dine@elis.com",
       },
       {
         title: "Day Spa & Gym",
         subtitle: "Enquiries & Bookings",
         phone: "+679 345 6677",
-        email: "wellness@cozystay.com",
+        email: "wellness@elis.com",
       },
       {
         title: "Banquet & Weddings",
         subtitle: "Enquiries & Bookings",
         phone: "+679 334 2211",
-        email: "events@cozystay.com",
+        email: "events@elis.com",
       },
     ],
     []
@@ -71,7 +71,7 @@ export default function ContactSplitSection() {
             </p>
 
             <h2 className="mt-6 font-marcellus text-4xl tracking-tight text-black/90 sm:text-5xl">
-              CozyStay Pacific Hotel
+              Elephant Island
             </h2>
 
             <div className="mt-8 space-y-2 text-[15px] leading-7 text-black/60">
@@ -87,7 +87,7 @@ export default function ContactSplitSection() {
               </p>
               <p>
                 <span className="font-semibold text-black/80">Email:</span>{" "}
-                info@cozystay.com
+                info@elis.com
               </p>
             </div>
 
@@ -122,19 +122,19 @@ export default function ContactSplitSection() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/images/pool.jpeg)" }} // 👈 change
+            style={{ backgroundImage: "url(/form.jpg)" }} // 👈 change
           />
           {/* subtle overlay (optional) */}
           <div className="absolute inset-0 bg-black/10" />
 
           {/* Form card */}
           <div className="relative z-10 flex min-h-[85vh] items-center justify-center px-6 py-16 sm:px-10">
-            <div className="w-full max-w-[720px] bg-white px-6 py-12 shadow-2xl sm:px-12 sm:py-14">
+            <div className="w-full max-w-md bg-white px-6 py-12 shadow-2xl sm:px-12 sm:py-14">
               <p className="text-center text-[11px] font-semibold tracking-[0.18em] text-black/50">
                 CONTACT FORM
               </p>
 
-              <h3 className="mt-5 text-center font-marcellus text-4xl text-black/90 sm:text-5xl">
+              <h3 className="mt-5 text-center font-marcellus text-4xl text-black/90 sm:text-4xl">
                 Let&apos;s Start A Conversation
               </h3>
 
