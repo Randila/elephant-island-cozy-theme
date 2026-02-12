@@ -337,7 +337,7 @@ export default function BookingHero({
                         <>
                           <div className={fieldWrapClass}>
                             <label className="block font-marcellus text-sm">
-                              Your Name<span className="text-white/70">*</span>
+                              Your Name<span className="">*</span>
                             </label>
                             <input
                               type="text"
@@ -352,7 +352,7 @@ export default function BookingHero({
                           <div className={fieldWrapClass}>
                             <label className="block font-marcellus text-sm">
                               Your E-Mail
-                              <span className="text-white/70">*</span>
+                              <span className="">*</span>
                             </label>
                             <input
                               type="email"
