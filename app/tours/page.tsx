@@ -1,6 +1,10 @@
 import HotelHeroSection from "../components/HotelHeroSection";
 import Navbar from "../components/Navbar";
 import IntroText from "../components/IntroText";
+import TourGrid from "../components/TourGrid";
+import { tours } from "../data/tours";
+import NewsletterSection from "../components/NewsletterSection";
+import SiteFooter from "../components/footer";
 
 export default function Tours() {
   return (
@@ -20,7 +24,11 @@ export default function Tours() {
         description="From wildlife safaris to cultural tours, beach relaxation to mountain adventures - we offer carefully crafted experiences that showcase the best of Sri Lanka's diverse landscapes and rich heritage."
       />
 
-      <div className="h-screen"></div>
+      <TourGrid tours={tours} />
+
+
+        <NewsletterSection backgroundImageUrl="/stay.webp" />
+            <SiteFooter />
     </>
   );
 }
