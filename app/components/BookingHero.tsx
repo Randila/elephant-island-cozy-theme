@@ -210,8 +210,8 @@ type FormData = {
 };
 
 const inputClass =
-  "mt-2 w-full bg-white text-black placeholder:text-black/25 outline-none";
-const fieldWrapClass = "border border-[#B8A77C]/60 p-3";
+  "mt-2 w-full bg-white text-black placeholder:text-black/25 border-t border-slate-200";
+const fieldWrapClass = "border border-[#B8A77C]/60 p-3 bg-white";
 
 export default function BookingHero({
   backgroundImage,
@@ -336,7 +336,7 @@ export default function BookingHero({
                       {step === 1 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Your Name<span className="text-white/70">*</span>
                             </label>
                             <input
@@ -350,7 +350,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Your E-Mail
                               <span className="text-white/70">*</span>
                             </label>
@@ -365,7 +365,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Your Phone / WhatsApp
                             </label>
                             <input
@@ -383,7 +383,7 @@ export default function BookingHero({
                       {step === 2 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Who Will You Be Travelling With?
                             </label>
                             <select
@@ -394,7 +394,7 @@ export default function BookingHero({
                                   e.target.value as FormData["travellingWith"],
                                 )
                               }
-                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                              className="mt-2 w-full bg-transparent outline-none"
                             >
                               <option className="text-black" value="">
                                 Select
@@ -415,7 +415,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Standard Of Accommodation
                             </label>
                             <select
@@ -426,7 +426,7 @@ export default function BookingHero({
                                   e.target.value as FormData["accommodation"],
                                 )
                               }
-                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                              className="mt-2 w-full bg-transparent outline-none"
                             >
                               <option className="text-black" value="">
                                 Select
@@ -447,13 +447,13 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Your Country
                             </label>
                             <select
                               value={form.country}
                               onChange={(e) => set("country", e.target.value)}
-                              className="mt-2 w-full bg-transparent text-white/90 outline-none"
+                              className="mt-2 w-full bg-transparent outline-none"
                             >
                               <option className="text-black" value="">
                                 Select country
@@ -476,7 +476,7 @@ export default function BookingHero({
                       {step === 3 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm text-white">
+                            <label className="block font-marcellus text-sm">
                               Tell Us As Much As Possible
                             </label>
                             <textarea
@@ -486,7 +486,7 @@ export default function BookingHero({
                               placeholder={
                                 "1) Your dates of travel: MM/YY or DD/MM/YY\n2) How many people are travelling?\n3) If with kids: number & ages?"
                               }
-                              className="mt-2 w-full resize-none bg-transparent text-white/90 placeholder:text-white/40 outline-none"
+                              className="mt-2 w-full resize-none bg-transparent placeholder:text-slate-300 outline-none"
                             />
                           </div>
                         </>
