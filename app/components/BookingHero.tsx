@@ -336,7 +336,7 @@ export default function BookingHero({
                       {step === 1 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Your Name<span className="">*</span>
                             </label>
                             <input
@@ -350,7 +350,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Your E-Mail
                               <span className="">*</span>
                             </label>
@@ -365,7 +365,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Your Phone / WhatsApp
                             </label>
                             <input
@@ -383,7 +383,7 @@ export default function BookingHero({
                       {step === 2 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Who Will You Be Travelling With?
                             </label>
                             <select
@@ -415,7 +415,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Standard Of Accommodation
                             </label>
                             <select
@@ -447,7 +447,7 @@ export default function BookingHero({
                           </div>
 
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Your Country
                             </label>
                             <select
@@ -476,7 +476,7 @@ export default function BookingHero({
                       {step === 3 && (
                         <>
                           <div className={fieldWrapClass}>
-                            <label className="block font-marcellus text-sm">
+                            <label className="block font-marcellus text-sm text-black">
                               Tell Us As Much As Possible
                             </label>
                             <textarea
