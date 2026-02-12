@@ -37,7 +37,7 @@ export default function ContactSplitSection() {
         email: "events@elis.com",
       },
     ],
-    []
+    [],
   );
 
   const [form, setForm] = useState({
@@ -48,7 +48,7 @@ export default function ContactSplitSection() {
   });
 
   function onChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const { name, value } = e.target;
     setForm((s) => ({ ...s, [name]: value }));
@@ -75,45 +75,26 @@ export default function ContactSplitSection() {
             </h2>
 
             <div className="mt-8 space-y-2 text-[15px] leading-7 text-black/60">
-              <p>572 – 636 Victoria Parade</p>
-              <p>P.O. Box 19217</p>
-              <p>Suva, Fiji</p>
+              <p>Nugegoda Business Center</p>
+              <p className="-mt-2">80 Nawala Road</p>
+              <p className="-mt-2">Nugegoda,Sri Lanka</p>
             </div>
 
             <div className="mt-6 space-y-2 text-[15px] leading-7 text-black/70">
               <p>
-                <span className="font-semibold text-black/80">Phone Number:</span>{" "}
-                +679 345 67 88
+                <span className="font-semibold text-black/80">
+                  Phone/ WhatsApp:
+                </span>{" "}
+                +94 77 707 2265
               </p>
               <p>
                 <span className="font-semibold text-black/80">Email:</span>{" "}
-                info@elis.com
+                info@elephant-island.com
               </p>
             </div>
 
-            <div className="my-10 h-px w-full bg-black/15" />
 
-            <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-16 sm:gap-y-14">
-              {cards.map((c) => (
-                <div key={c.title}>
-                  <h3 className="font-marcellus text-2xl text-black/90">
-                    {c.title}
-                  </h3>
-                  <p className="mt-3 text-[13px] font-semibold text-black/60">
-                    {c.subtitle}
-                  </p>
-
-                  <div className="mt-3 space-y-1 text-[14px] text-black/60">
-                    <p>
-                      <span className="text-black/70">Phone:</span> {c.phone}
-                    </p>
-                    <p>
-                      <span className="text-black/70">Email:</span> {c.email}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          
           </div>
         </div>
 
@@ -134,8 +115,8 @@ export default function ContactSplitSection() {
                 CONTACT FORM
               </p>
 
-              <h3 className="mt-5 text-center font-marcellus text-4xl text-black/90 sm:text-4xl">
-                Let&apos;s Start A Conversation
+              <h3 className="mt-5 text-center font-marcellus text-4xl text-black/90 sm:text-3xl">
+               Contact Our <br/> Sri Lanka Travel Experts
               </h3>
 
               <form onSubmit={onSubmit} className="mt-10 space-y-5">
@@ -164,7 +145,7 @@ export default function ContactSplitSection() {
                     name="message"
                     value={form.message}
                     onChange={onChange}
-                    placeholder="Your Message"
+                    placeholder="How Can We Help You?"
                     rows={5}
                     className="w-full rounded-none border border-black/10 bg-white px-4 py-4 text-[14px] text-black/70 outline-none transition focus:border-black/30"
                   />

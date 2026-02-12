@@ -210,7 +210,7 @@ type FormData = {
 };
 
 const inputClass =
-  "mt-2 w-full bg-transparent text-white/90 placeholder:text-white/40 outline-none";
+  "mt-2 w-full bg-white text-black placeholder:text-black/25 outline-none";
 const fieldWrapClass = "border border-[#B8A77C]/60 p-3";
 
 export default function BookingHero({
@@ -301,7 +301,7 @@ export default function BookingHero({
               {/* Right booking card */}
               <div className="lg:col-span-5 lg:flex lg:justify-end">
                 <div className="w-full max-w-md bg-[#2E3B36]/85 backdrop-blur md:p-2">
-                  <div className="border border-[#B8A77C]/70 p-6 md:p-8">
+                  <div className="border border-[#A39F58]/70 p-6 md:p-8">
                     <p className="text-center text-xs font-semibold tracking-[0.22em] text-white/85">
                       PLAN YOUR TRIP
                     </p>
@@ -507,14 +507,14 @@ export default function BookingHero({
                           <button
                             type="button"
                             onClick={next}
-                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                            className="w-2/3 bg-[#E8A7C5] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
                           >
                             Next
                           </button>
                         ) : (
                           <button
                             type="submit"
-                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                            className="w-2/3 bg-[#E8A7C5] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
                           >
                             Send Enquiry
                           </button>

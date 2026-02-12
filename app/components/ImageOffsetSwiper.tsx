@@ -90,7 +90,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                         {/* badge */}
                         {s.badge ? (
                           <p className="mb-auto mt-2 text-[11px] font-semibold tracking-[0.22em] text-white/80">
-                            3 Nights | 4 Days
+                            {s.badge}
                           </p>
                         ) : (
                           <div className="mb-auto mt-2 h-[14px]" />

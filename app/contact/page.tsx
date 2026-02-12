@@ -13,7 +13,7 @@ export default function Contact() {
         title="Contact Us"
         subtitle="Get in touch with us for your perfect island getaway"
         tagline="WE'RE HERE TO HELP"
-        backgroundImage="/contact.jpg"
+        backgroundImage="/sea.jpeg"
       />
       <ContactSplitSection/>
 

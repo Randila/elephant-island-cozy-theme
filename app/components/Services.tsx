@@ -8,26 +8,31 @@ const services = [
     title: "Group Tours",
     desc: "We can arrange tours for any group size inclusive of vans and luxury coaches.",
     Icon: Users,
+    image: "/icons/peacock.jpeg",
   },
   {
     title: "Special Interest Holidays",
     desc: "We organize specialist wildlife, birding, golfing holidays and more.",
     Icon: MapPin,
+    image: "/icons/tiger.jpeg",
   },
   {
     title: "Hotel Bookings",
     desc: "We guarantee to quote lower rates for any hotel in Sri Lanka.",
     Icon: Building,
+    image: "/icons/bag.jpeg",
   },
   {
     title: "Vehicles For Tours",
     desc: "We provide fully licensed A/C vehicles with English speaking guides.",
     Icon: Car,
+    image: "/icons/car.jpeg",
   },
   {
     title: "Day Trips From Colombo",
     desc: "Excursions to Sigiriya, Kandy, Galle from the capital city.",
     Icon: Calendar,
+    image: "/icons/elephant.jpeg",
   },
 ];
 
@@ -60,11 +65,10 @@ const TwoColumnSection = () => {
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
-              {services.map(({ title, desc, Icon }) => (
+              {services.map(({ title, desc, Icon, image }) => (
                 <div key={title} className="flex gap-4">
-                  <div className="shrink-0 pt-1">
-                    <Icon className="h-6 w-6 text-[#b7925a]" />
-                  </div>
+                  
+                  <img src={image} alt={title} className="h-6" />
 
                   <div className="space-y-2">
                     <h4 className="font-marcellus text-xl text-gray-900">
