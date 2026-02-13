@@ -211,7 +211,7 @@ type FormData = {
 
 const inputClass =
   "mt-2 w-full bg-white text-black placeholder:text-black/25 border-t border-slate-200";
-const fieldWrapClass = "border border-[#B8A77C]/60 p-3 bg-white";
+const fieldWrapClass = "border border-[#B8A77C]/60 p-3 bg-white rounded-lg";
 
 export default function BookingHero({
   backgroundImage,
@@ -300,8 +300,8 @@ export default function BookingHero({
 
               {/* Right booking card */}
               <div className="lg:col-span-5 lg:flex lg:justify-end">
-                <div className="w-full max-w-md bg-[#2E3B36]/85 backdrop-blur md:p-2">
-                  <div className="border border-[#A39F58]/70 p-6 md:p-8">
+                <div className="w-full max-w-md bg-[#7F8454] backdrop-blur md:p-2 rounded-2xl">
+                  <div className="border border-[#A39F58]/70 p-6 md:p-8 rounded-2xl">
                     <p className="text-center text-xs font-semibold tracking-[0.22em] text-white/85">
                       PLAN YOUR TRIP
                     </p>
