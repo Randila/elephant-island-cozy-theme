@@ -210,7 +210,7 @@ type FormData = {
 };
 
 const inputClass =
-  "mt-2 w-full text-black placeholder:text-white/25 outline-none";
+  "mt-2 w-full text-white placeholder:text-white/25 outline-none";
 const fieldWrapClass = "border border-[#B8A77C]/60 p-3";
 
 export default function BookingHero({
@@ -507,14 +507,14 @@ export default function BookingHero({
                           <button
                             type="button"
                             onClick={next}
-                            className="w-2/3 bg-[#E8A7C5] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
                           >
                             Next
                           </button>
                         ) : (
                           <button
                             type="submit"
-                            className="w-2/3 bg-[#E8A7C5] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
+                            className="w-2/3 bg-[#B8A77C] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
                           >
                             Send Enquiry
                           </button>
