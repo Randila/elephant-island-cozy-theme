@@ -9,6 +9,7 @@ import SiteFooter from "./components/footer";
 import TwoColumnSection from "./components/TwoColumnSection";
 import TwoColumnSectionReverse from "./components/TwoColumnSectionReverse";
 import Services from "./components/Services";
+import BookingHero from "./components/BookingHero";
 
 export default function Home() {
   const slides = [
@@ -102,6 +103,9 @@ export default function Home() {
           },
         ]}
       />
+
+        
+        <BookingHero backgroundImage="/road.jpg" />
 
       <Services />
 
