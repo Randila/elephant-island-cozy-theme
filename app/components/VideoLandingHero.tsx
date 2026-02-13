@@ -20,7 +20,7 @@ export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
         <div className="h-12 w-px bg-white/45 my-8"></div>
         {/* CTA Button */}
         <div>
-          <button className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-marcellus font-medium text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-all duration-300 overflow-hidden cursor-pointer">
+          <button className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-marcellus font-medium text-black bg-[#E8A7C5] rounded-full transition-all duration-300 overflow-hidden cursor-pointer">
             {/* Button text */}
             <span className="px-4">Enquire</span>
 

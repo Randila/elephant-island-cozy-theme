@@ -153,7 +153,7 @@ export default function ContactSplitSection() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#b79b73] py-4 text-center text-[13px] font-semibold tracking-wide text-white transition hover:brightness-95"
+                  className="w-full bg-[#E8A7C5] py-4 text-center text-[13px] font-semibold tracking-wide text-white transition hover:brightness-95"
                 >
                   Send Your Message
                 </button>
