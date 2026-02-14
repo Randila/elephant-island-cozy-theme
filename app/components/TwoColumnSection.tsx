@@ -10,7 +10,7 @@ const TwoColumnSection = () => {
           {/* Left Column - Parallax Image */}
           <div className="order-2 lg:order-1 lg:p-10">
             <Parallax
-              bgImage="/images/river.jpeg"
+              bgImage="/images/gal-oya-lodge.jpeg"
               bgImageAlt="Restaurant interior"
               strength={75}
               className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden hidden xl:block"
@@ -20,7 +20,7 @@ const TwoColumnSection = () => {
               </div>
             </Parallax>
 
-            <img src="/images/river.jpeg" className="xl:hidden" alt="" />
+            <img src="/images/gal-oya-lodge.jpeg" className="xl:hidden" alt="" />
           </div>
 
           {/* Right Column - Text Content */}

@@ -276,26 +276,50 @@ export default function BookingHero({
         {/* Parallax needs height from inner content */}
         <div className="relative min-h-[85vh] z-30">
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/35" />
+          <div className="absolute inset-0 bg-[#333]" />
 
           <div className="relative mx-auto flex min-h-[85vh] max-w-7xl items-center px-4 py-16 md:px-6">
             <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
               {/* Left text */}
               <div className="lg:col-span-7 text-center p-4 lg:text-left">
-                <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-white/90 md:text-sm">
-                  BEST PLACE FOR RELAX
-                </p>
+                
 
-                <h1 className="font-marcellus text-5xl leading-[1.02] text-white md:text-7xl">
-                  Start Planning Your Travel
+                <h1 className="font-marcellus text-4xl leading-[1.02] text-white md:text-5xl">
+                  Contact Our Sri Lankan Travel Experts
                 </h1>
 
-                <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-                  Nestled in scenic island escapes, Elephant Island Cozy is a
-                  boutique stay designed for slow mornings, golden sunsets, and
-                  unforgettable moments — close to the coast, culture, and the
-                  places you’ll love exploring.
-                </p>
+                <h2 className="font-marcellus text-xl leading-[1.02] text-white md:text-2xl mt-6">
+                  Tel : 0203 038 2586
+                </h2>
+
+                 <h2 className="font-marcellus text-xl leading-[1.02] text-white md:text-2xl mt-6">
+                  Email : info@srilankainluxury.com
+                </h2>
+
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+
+                    <div>
+                      <img src="/team/shane.jpeg" className="w-full" alt="" />
+                      <h6 className="text-white text-xl mt-2">Shane</h6>
+                    </div>
+
+                    <div>
+                      <img src="/team/ashan.jpeg" className="w-full" alt="" />
+                      <h6 className="text-white text-xl mt-2">Ashan</h6>
+                    </div>
+
+                    <div>
+                      <img src="/team/rangila.jpeg" className="w-full" alt="" />
+                      <h6 className="text-white text-xl mt-2">Rangila</h6>
+                    </div>
+
+                    <div>
+                      <img src="/team/riyaz.jpeg" className="w-full" alt="" />
+                      <h6 className="text-white text-xl mt-2">Riyaz</h6>
+                    </div>
+
+                </div>
+               
               </div>
 
               {/* Right booking card */}

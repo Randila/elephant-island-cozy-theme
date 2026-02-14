@@ -49,7 +49,7 @@ export default function Navbar() {
   const textClasses = isPastHero ? "text-gray-900" : "text-white";
   const bookButtonClasses = isPastHero
     ? "bg-[#E8A7C5] text-black"
-    : "bg-white/15 text-white backdrop-blur-md hover:bg-white/20";
+    : "bg-[#E8A7C5] text-black backdrop-blur-md hover:bg-white/20";
 
   const burgerLine1 = isPastHero ? "bg-gray-800" : "bg-white/85";
   const burgerLine2 = isPastHero ? "bg-gray-600" : "bg-white/65";

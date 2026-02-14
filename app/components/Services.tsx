@@ -44,7 +44,7 @@ const TwoColumnSection = () => {
           {/* Left Column - Parallax Image */}
           <div className="order-2 lg:order-1 p-0 ">
             <Parallax
-              bgImage="/images/elephant.jpeg"
+              bgImage="/images/Millennium-Elephant-Foundation.jpeg"
               bgImageAlt="Restaurant interior"
               strength={75}
               className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden"

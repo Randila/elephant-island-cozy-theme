@@ -27,7 +27,7 @@ export default function SiteFooter({
           {/* Phone */}
           <div className="border-white/10 py-10 md:border-r md:px-8">
             <div className="text-xs font-semibold tracking-[0.25em] text-white/40">
-              PHONE
+              PHONE | WHATSAPP
             </div>
             <a
               href={`tel:${phone.replace(/\s+/g, "")}`}
@@ -71,7 +71,7 @@ export default function SiteFooter({
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
           <div className="text-sm text-white/60">
-            © Copyright Elephant Island, Sri Lanka
+            © Copyright Elephant Island 2026
           </div>
 
           <div className="flex items-center gap-8 text-xs font-semibold tracking-[0.25em] text-white/40">

@@ -112,8 +112,8 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                           <div className="pl-4">More info</div>
 
                           <div>
-                            <span className="inline-flex p-4 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20">
-                              <ChevronRight className="w-3 h-3 text-white" />
+                            <span className="inline-flex p-4 items-center justify-center rounded-full ring-1 ring-white/20 bg-[#E8A7C5]">
+                              <ChevronRight className="w-3 h-3 text-black" />
                             </span>
                           </div>
 
