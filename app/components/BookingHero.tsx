@@ -299,23 +299,23 @@ export default function BookingHero({
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
 
                     <div>
-                      <img src="/team/shane.jpeg" className="w-full" alt="" />
-                      <h6 className="text-white text-xl mt-2">Shane</h6>
+                      <img src="/team/shane.jpeg" className="w-full rounded-full" alt="" />
+                      <h6 className="text-white text-xl mt-2 text-center">Shane</h6>
                     </div>
 
                     <div>
-                      <img src="/team/ashan.jpeg" className="w-full" alt="" />
-                      <h6 className="text-white text-xl mt-2">Ashan</h6>
+                      <img src="/team/ashan.jpeg" className="w-full rounded-full" alt="" />
+                      <h6 className="text-white text-xl mt-2 text-center">Ashan</h6>
                     </div>
 
                     <div>
-                      <img src="/team/rangila.jpeg" className="w-full" alt="" />
-                      <h6 className="text-white text-xl mt-2">Rangila</h6>
+                      <img src="/team/rangila.jpeg" className="w-full rounded-full" alt="" />
+                      <h6 className="text-white text-xl mt-2 text-center">Rangila</h6>
                     </div>
 
                     <div>
-                      <img src="/team/riyaz.jpeg" className="w-full" alt="" />
-                      <h6 className="text-white text-xl mt-2">Riyaz</h6>
+                      <img src="/team/riyaz.jpeg" className="w-full rounded-full" alt="" />
+                      <h6 className="text-white text-xl mt-2 text-center">Riyaz</h6>
                     </div>
 
                 </div>
