@@ -14,7 +14,7 @@ function getRect(el: Element | null): Rect | null {
 export default function Preloader({
   show,
   onDone,
-  videoSrc = "/header-video.mp4",
+  videoSrc = "/hero.mp4",
   logoTextTop = "ELEPHANT",
   logoTextBottom = "ISLAND",
 }: {

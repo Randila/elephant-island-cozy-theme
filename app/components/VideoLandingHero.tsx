@@ -1,4 +1,4 @@
-export default function VideoLandingHero({ videoSrc = "/header-video.mp4" }) {
+export default function VideoLandingHero({ videoSrc = "/hero.mp4" }) {
   return (
     <section className="relative h-screen md:h-[75dvh] lg:h-screen w-full overflow-hidden bg-black">
       <video

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <VideoLandingHero videoSrc="/header-video.mp4" />
+      <VideoLandingHero videoSrc="/hero.mp4" />
 
       <IntroText 
         label="Welcome to Sri Lanka"
