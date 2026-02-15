@@ -54,11 +54,15 @@ export default function NewsletterSection({
               <p className="text-white mt-6 text-sm">
                 Elephant Island Is A Brand Name Of Sri Lanka In Luxury Ltd.
               </p>
+
+               <p className="text-xs font-semibold tracking-[0.25em] text-white mt-12 hidden lg:block">
+                  Established Since 2003
+                </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-6 lg:right-6">
+        <div className="absolute bottom-6 left-6 lg:right-6 lg:hidden">
           <p className="text-xs font-semibold tracking-[0.25em] text-white">
             Established Since 2003
           </p>

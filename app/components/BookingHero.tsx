@@ -296,7 +296,7 @@ export default function BookingHero({
                   Email : info@srilankainluxury.com
                 </h2>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
 
                     <div>
                       <img src="/team/shane.jpeg" className="w-full" alt="" />
@@ -323,7 +323,7 @@ export default function BookingHero({
               </div>
 
               {/* Right booking card */}
-              <div className="lg:col-span-5 lg:flex lg:justify-end">
+              <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="w-full max-w-md bg-[#7F8454] backdrop-blur md:p-2 rounded-2xl">
                   <div className="border border-[#A39F58]/70 p-6 md:p-8 rounded-2xl">
                     <p className="text-center text-xs font-semibold tracking-[0.22em] text-white/85">
