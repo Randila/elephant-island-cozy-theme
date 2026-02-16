@@ -11,7 +11,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day1.jpeg"
+              src="/tours/highlights/day1.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -20,7 +20,7 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Sri Lanka Breakfast
+            Colombo City Centre Shopping Mall
           </p>
 
           {/* Day Title */}
@@ -62,7 +62,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day1.jpeg"
+              src="/tours/highlights/day2.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -71,12 +71,12 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Sri Lanka Breakfast
+            Temple Of The Tooth At Kandy
           </p>
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 1 - Colombo
+            DAY 2 - Kandy
           </h2>
 
           {/* point 1 */}
@@ -84,22 +84,17 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img
-                src="/tours/shopping-bag.png"
-                className="w-6 shrink-0"
-                alt=""
-              />
+              <img src="/tours/elephant.jpg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Shopping And Sightseeing In
-                <br />
-                Colombo
+                The Pinnawala Elephant <br />
+                Orphanage
               </p>
             </div>
 
             <p className="text-center text-sm">
-              One Galle Face | Colombo City Centre | Barefoot Gallery | Galle
-              Face Hotel
+              Elephants Bathing In The River I Baby Elephants Feeding I Bathe
+              With Elephants At The Millennium Elephant Foundation
             </p>
           </div>
 
@@ -108,24 +103,117 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img
-                src="/tours/shopping-bag.png"
-                className="w-6 shrink-0"
-                alt=""
-              />
+              <img src="/tours/dancer.jpg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Shopping And Sightseeing In
-                <br />
-                Colombo
+                The Old Royal Capital <br /> Of Kandy
               </p>
             </div>
 
             <p className="text-center text-sm">
-              One Galle Face | Colombo City Centre | Barefoot Gallery | Galle
-              Face Hotel
+              UNESCO Heritage Old Town I Kandy Viewpoint Temple Of The Tooth
+              Evening Pooja I Kandyan Cultural Dance
             </p>
           </div>
+        </div>
+
+        {/* day 3 */}
+        <div className="border border-green-500 rounded-2xl p-4">
+          {/* Image */}
+          <div className="relative w-full h-82">
+            <Image
+              src="/tours/highlights/day3.jpeg"
+              alt="Colombo City Centre Shopping Mall"
+              fill
+              className="object-cover rounded-xl"
+            />
+          </div>
+
+          {/* Caption */}
+          <p className="mt-2 text-center text-sm text-gray-700">
+            Cinnamon Bentota Beach Hotel
+          </p>
+
+          {/* Day Title */}
+          <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+            DAY 3 - Bentota Beach
+          </h2>
+
+          {/* point 1 */}
+          <div className="mb-4">
+            {/* title */}
+
+            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
+              <img src="/tours/flower.jpeg" className="w-6 shrink-0" alt="" />
+
+              <p className="text-lg font-semibold text-center leading-snug">
+                Peradeniya Gardens
+              </p>
+            </div>
+
+            <p className="text-center text-sm">
+              Amazing Orchid Houses I The Royal Palm Avenue I The World’s
+              Fastest Growing Bamboos!
+            </p>
+          </div>
+
+          {/* point 2*/}
+          <div className="mb-4">
+            {/* title */}
+
+            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
+              <img src="/tours/island.png" className="w-6 shrink-0" alt="" />
+
+              <p className="text-lg font-semibold text-center leading-snug">
+                Relax On The Beach <br /> At Bentota.
+              </p>
+            </div>
+
+            <p className="text-center text-sm">
+              Golden Sandy Beaches I River Boat Trips Turtle Hatchery I Lagoon
+              Watersports
+            </p>
+          </div>
+        </div>
+
+         {/* day 4 */}
+        <div className="border border-green-500 rounded-2xl p-4">
+          {/* Image */}
+          <div className="relative w-full h-82">
+            <Image
+              src="/tours/highlights/day4.jpeg"
+              alt="Colombo City Centre Shopping Mall"
+              fill
+              className="object-cover rounded-xl"
+            />
+          </div>
+
+          {/* Caption */}
+          <p className="mt-2 text-center text-sm text-gray-700">
+            Sri Lanka’s Famous Hoppers
+          </p>
+
+          {/* Day Title */}
+          <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+            DAY 4 - Depart Colombo Airport
+          </h2>
+
+          {/* point 1 */}
+          <div className="mb-4">
+            {/* title */}
+
+            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
+              <img src="/tours/plane.jpeg" className="w-6 shrink-0" alt="" />
+
+              <p className="text-lg font-semibold text-center leading-snug">
+                Drop Off At Colombo Airport
+              </p>
+            </div>
+
+            
+          </div>
+
+         
         </div>
       </section>
 
@@ -139,7 +227,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/highlights/day2.jpeg"
+              src="/tours/highlights/cost.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"

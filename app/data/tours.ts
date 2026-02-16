@@ -6,7 +6,7 @@ export const tours = [
     badge: "3 Nights | 4 Days",
     title: "Sri Lanka's Highlights",
     subtitle: "Colombo | Kandy | Bentota",
-    href: "/packages/explorer",
+    href: "/tours/Sri-Lankas-Highlights",
   },
   {
     id: "2",
@@ -15,7 +15,7 @@ export const tours = [
     badge: "4 Nights | 5 Days",
     title: "Sri Lanka's Cultural Triangle",
     subtitle: "Colombo | Kandy | Sigiriya | Bentota",
-    href: "/packages/romance",
+    href: "/tours/Sri-Lankas-Cultural-Triangle",
   },
   {
     id: "3",
@@ -24,7 +24,7 @@ export const tours = [
     badge: "3 Nights | 4 Days",
     title: "Kandy and Sri Lanka's Hill Country",
     subtitle: "Colombo | Kandy | Bentota",
-    href: "/packages/wellness",
+    href: "/tours/Kandy-and-Hill-Country",
   },
   {
     id: "4",
@@ -33,7 +33,7 @@ export const tours = [
     badge: "3 Nights | 4 Days",
     title: "Tour of Southern Sri Lanka",
     subtitle: "Colombo | Galle | Yala",
-    href: "/packages/adventure",
+    href: "/tours/Tour-of-Southern-Sri-Lanka",
   },
   {
     id: "5",
@@ -42,7 +42,7 @@ export const tours = [
     badge: "6 Nights | 7 Days",
     title: "Classic Tour of Sri Lanka",
     subtitle: "Colombo | Sigiriya | Kandy | Ella",
-    href: "/packages/luxury",
+    href: "/tours/Classic-Tour-of-Sri-Lanka",
   },
   {
     id: "6",
@@ -51,6 +51,6 @@ export const tours = [
     badge: "7 Nights | 8 Days",
     title: "Complete Tour of Sri Lanka",
     subtitle: "Colombo | Sigiriya | Kandy | Ella | Yala | Galle",
-    href: "/packages/signature",
+    href: "/tours/Complete-Tour-of-Sri-Lanka",
   },
 ];

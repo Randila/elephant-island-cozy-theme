@@ -11,17 +11,15 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day1.jpeg"
-              alt="Colombo City Centre Shopping Mall"
+              src="/tours/classic/day1.jpeg"
+              alt="Beira Lake Pavilion At Colombo"
               fill
               className="object-cover rounded-xl"
             />
           </div>
 
           {/* Caption */}
-          <p className="mt-2 text-center text-sm text-gray-700">
-            Sri Lanka Breakfast
-          </p>
+          <p className="mt-2 text-center text-sm text-gray-700">Colombo</p>
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
@@ -62,7 +60,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day2.jpeg"
+              src="/tours/classic/day2.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -71,7 +69,7 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Dambulla Cave Temple
+            Sigiriya Rock Fortress
           </p>
 
           {/* Day Title */}
@@ -84,17 +82,17 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/budda.jpeg" className="w-6 shrink-0" alt="" />
+              <img src="/tours/elephant.jpg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                The Golden Cave Temple
-                <br /> At Dambulla
+                The Pinnawala Elephant <br />
+                Orphanage
               </p>
             </div>
 
             <p className="text-center text-sm">
-              Sri Lanka’s Artistic Masterpiece I 5 Ancient Cave Temples I 23 000
-              Sq Feet Of Murals And 115 Buddha Statues.
+              Elephants Bathing In The River I Baby Elephants Feeding I Bathe
+              With Elephants At The Millennium Elephant Foundation
             </p>
           </div>
 
@@ -103,17 +101,16 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/mountain.jpeg" className="w-6 shrink-0" alt="" />
+              <img src="/tours/dancer.jpg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                The Sigiriya Rock Fortress
+                The Golden Cave Temple <br /> At Dambulla
               </p>
             </div>
 
             <p className="text-center text-sm">
-              Famous Sigiriya Frescoes I Lion’s Paws Entrance To Summit I Water
-              Gardens At The Base I Ruins Of A Palace At The Top I One Of The
-              Great Wonders Of The Ancient World!
+              Sri Lanka’s Artistic Masterpiece I 5 Ancient Cave Temples I 23 000
+              Sq Feet Of Murals And 115 Buddha Statues.
             </p>
           </div>
         </div>
@@ -123,8 +120,8 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day3.jpeg"
-              alt="Kandy Lake And Queens Bathing Pavilion"
+              src="/tours/classic/day3.jpeg"
+              alt="Castlereigh Lake At Hatton"
               fill
               className="object-cover rounded-xl"
             />
@@ -132,7 +129,7 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Kandy Lake And Queens Bathing Pavilion
+            Bahirawakanda Buddha Statue At Kandy
           </p>
 
           {/* Day Title */}
@@ -141,6 +138,25 @@ export default function TourSection() {
           </h2>
 
           {/* point 1 */}
+          <div className="mb-4">
+            {/* title */}
+
+            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
+              <img src="/tours/train.jpeg" className="w-6 shrink-0" alt="" />
+
+              <p className="text-lg font-semibold text-center leading-snug">
+                The Sigiriya Rock <br /> Fortress
+              </p>
+            </div>
+
+            <p className="text-center text-sm">
+              Famous Sigiriya Frescoes I Lion’s Paws Entrance To Summit I Water
+              Gardens At The base I Ruins Of A Palace At The Top One Of The
+              Great Wonders Of The Ancient World!
+            </p>
+          </div>
+
+          {/* point 2*/}
           <div className="mb-4">
             {/* title */}
 
@@ -157,24 +173,6 @@ export default function TourSection() {
               Tooth Evening Pooja I Kandyan Cultural Dance
             </p>
           </div>
-
-          {/* point 2*/}
-          <div className="mb-4">
-            {/* title */}
-
-            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/flower.jpeg" className="w-6 shrink-0" alt="" />
-
-              <p className="text-lg font-semibold text-center leading-snug">
-                Peradeniya Gardens
-              </p>
-            </div>
-
-            <p className="text-center text-sm">
-              Amazing Orchid Houses I The Royal Palm Avenue The World’s Fastest
-              Growing Bamboos!
-            </p>
-          </div>
         </div>
 
         {/* day 4 */}
@@ -182,8 +180,8 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day4.jpeg"
-              alt="Kandy Lake And Queens Bathing Pavilion"
+              src="/tours/classic/day4.jpeg"
+              alt="Coconut Tree Hill At Mirissa"
               fill
               className="object-cover rounded-xl"
             />
@@ -191,12 +189,12 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Taj Bentota Resort And Spa
+            Express Train Through The Hill Country
           </p>
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 4 - Bentota Beach
+            DAY 4 - Ella
           </h2>
 
           {/* point 1 */}
@@ -204,16 +202,17 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/elephant.jpg" className="w-6 shrink-0" alt="" />
+              <img src="/tours/train.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                The Pinnawala Elephant <br /> Orphanage
+                By Train Through <br /> The Hill Country
               </p>
             </div>
 
             <p className="text-center text-sm">
-              Elephants Bathing In The River I Baby Elephants Feeding I Bathe
-              With Elephants At The Millennium Elephant Foundation
+              Ascent Of The Ramboda Pass Via Hairpin Bends I The Old British
+              Hill Station Of Nuwara Eliya I 1st Class Seat On The Hill Country
+              Express
             </p>
           </div>
 
@@ -222,16 +221,16 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/island.png" className="w-6 shrink-0" alt="" />
+              <img src="/tours/morning.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Relax On The Beach <br /> At Bentota.
+                The Pretty Village <br /> Of Ella
               </p>
             </div>
 
             <p className="text-center text-sm">
-              Golden Sandy Beaches I River Boat Trips Turtle Hatchery I Lagoon
-              Watersports
+              9 Arch Railway Bridge I Little Adam’s Peak Viewpoint I Beautiful
+              Views Of The Lowlands From Ella Gap
             </p>
           </div>
         </div>
@@ -241,7 +240,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/day5.jpeg"
+              src="/tours/classic/day5.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -250,12 +249,12 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Millennium Elephant Foundation
+            Beach Swings At Dickwella
           </p>
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 4 - Depart Colombo Airport
+            DAY 5 - To Beach Hotel
           </h2>
 
           {/* point 1 */}
@@ -263,12 +262,17 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/plane.jpeg" className="w-6 shrink-0" alt="" />
+              <img src="/tours/island.png" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Drop Off At Colombo Airport
+                Relax On Sri Lanka’s Beaches
               </p>
             </div>
+
+            <p className="text-center text-sm">
+              Whale Watching At Mirissa I River Boat Trips Turtle Hatchery I
+              Lagoon Watersports
+            </p>
           </div>
         </div>
       </section>
@@ -276,14 +280,16 @@ export default function TourSection() {
       {/* cost card */}
       <section
         className="bg-cover bg-center flex items-center justify-end p-6 lg:p-20 mb-12"
-        style={{ backgroundImage: "url('/tours/cultural/sigiriya.jpg')" }}
+        style={{
+          backgroundImage: "url('/tours/classic/ocean.webp')",
+        }}
       >
         {/* cost card */}
         <div className="max-w-lg bg-white border border-green-500 rounded-2xl p-4">
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/cultural/cost.jpeg"
+              src="/tours/classic/cost.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -292,7 +298,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-left text-2xl font-marcellus font-bold tracking-wide">
-            Sri Lanka’s Cultural Triangle
+            Classic Tour Of Sri Lanka
           </h2>
 
           {/* points */}

@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import HotelHeroSection from "../../components/HotelHeroSection";
 import NewsletterSection from "../../components/NewsletterSection";
 import SiteFooter from "../../components/footer";
-import TourSection from "../../components/cultural/TourSection";
+import TourSection from "../../components/complete/TourSection";
 import { tours } from "../../data/tours";
 import ImageOffsetSwiper from "../../components/ImageOffsetSwiper";
 
@@ -11,10 +11,10 @@ export default function Tour() {
     <>
       <Navbar />
       <HotelHeroSection
-        title="Sri Lanka's Cultural Triangle"
+        title="Complete Tour of Sri Lanka"
         subtitle=""
-        tagline="3 Nights | 4 Days"
-        backgroundImage="/slider/tour2.jpeg"
+        tagline="7 Nights | 8 Days"
+        backgroundImage="/slider/tour6.jpeg"
       />
 
       <TourSection />
