@@ -56,15 +56,16 @@ export default function Navbar() {
 
   const primaryLinks = [
     { label: "Home", href: "/" },
-    { label: "Tours", href: "/tours" },
-    { label: "About", href: "/about" },
+    { label: "Featured Tours", href: "/tours" },
+    { label: "About Sri Lanka", href: "/about" },
+    { label: "About Us", href: "/contact" },
   ];
 
   const mobileLinks = [
     { label: "Home", href: "/" },
-    { label: "Tours", href: "/tours" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Featured Tours", href: "/tours" },
+    { label: "About Sri Lanka", href: "/about" },
+    { label: "About Us", href: "/contact" },
   ];
 
   const menuGroups: MenuGroup[] = [
@@ -210,7 +211,7 @@ export default function Navbar() {
                   key={l.label}
                   href={l.href}
                   onClick={closeMenu}
-                  className="block text-[52px] leading-[0.95] tracking-[-0.02em] hover:opacity-80 transition"
+                  className="block text-4xl leading-[0.95] tracking-[-0.02em] hover:opacity-80 transition"
                 >
                   {l.label}
                 </Link>
@@ -221,7 +222,7 @@ export default function Navbar() {
           <div className="flex-1" />
 
           {/* MIDDLE */}
-          <div className="border-t border-[#2a1c14]/15">
+          <div className="border-t border-[#2a1c14]/15 hidden">
             <div className="px-8 py-10">
               <div className="grid grid-cols-2 gap-12">
                 {menuGroups.map((g) => (
@@ -257,7 +258,7 @@ export default function Navbar() {
           </div>
 
           {/* FOOTER pinned bottom */}
-          <div className="border-t border-[#2a1c14]/15 px-8 py-4">
+          <div className="border-t border-[#2a1c14]/15 px-8 py-4 hidden">
             <div className="flex items-center justify-between text-[13px] text-[#2a1c14]/55">
               <div className="flex items-center gap-3">
                 <span className="text-[#d5a100]">★★★★★</span>
