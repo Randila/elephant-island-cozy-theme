@@ -20,7 +20,11 @@ const TwoColumnSection = () => {
               </div>
             </Parallax>
 
-            <img src="/images/gal-oya-lodge.jpeg" className="xl:hidden" alt="" />
+            <img
+              src="/images/gal-oya-lodge.jpeg"
+              className="xl:hidden"
+              alt=""
+            />
           </div>
 
           {/* Right Column - Text Content */}

@@ -60,7 +60,7 @@ export default function Home() {
 
       <Services/>
 
-      <NewsletterSection backgroundImageUrl="/stay.webp" />
+      <NewsletterSection backgroundImageUrl="/banner.jpeg" />
       <SiteFooter />
     </>
   );
