@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
-import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import { useRouter } from "next/navigation";
 
 type Slide = {
   id: string;
@@ -21,6 +21,12 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
   const swiperRef = useRef<SwiperType | null>(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const router = useRouter();
+
+  const handleCardClick = (href: string) => {
+    window.scrollTo(0, 0);
+    router.push(href);
+  };
 
   const handleSwiper = useCallback((swiper: SwiperType) => {
     swiperRef.current = swiper;
@@ -58,9 +64,9 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
             className="!overflow-visible"
           >
             {slides.map((s) => {
-              const Wrapper: React.ElementType = s.href ? Link : "div";
+              const handleClick = s.href ? () => handleCardClick(s.href!) : undefined;
               const wrapperProps = s.href
-                ? { href: s.href, "aria-label": s.title }
+                ? { onClick: handleClick, "aria-label": s.title, role: "button", tabIndex: 0 }
                 : {};
 
               return (
@@ -69,9 +75,9 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
                   className="!w-[280px] xs:!w-[320px] sm:!w-[360px] md:!w-[420px] lg:!w-[400px]"
                 >
                   <article className="group relative overflow-hidden bg-black/5 shadow-sm ring-1 ring-black/10">
-                    <Wrapper
+                    <div
                       {...wrapperProps}
-                      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40"
+                      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40 cursor-pointer"
                     >
                       {/* image */}
                       <div className="relative aspect-9/16 lg:aspect-2/3 w-full">
@@ -119,7 +125,7 @@ export default function OutstandingViewsSwiper({ slides }: { slides: Slide[] }) 
 
                         </div>
                       </div>
-                    </Wrapper>
+                    </div>
                   </article>
                 </SwiperSlide>
               );

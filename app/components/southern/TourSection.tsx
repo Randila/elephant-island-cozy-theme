@@ -11,7 +11,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/classic/day1.jpeg"
+              src="/tours/southern/day1.jpg"
               alt="Beira Lake Pavilion At Colombo"
               fill
               className="object-cover rounded-xl"
@@ -130,7 +130,7 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/train.jpeg" className="w-6 shrink-0" alt="" />
+              <img src="/tours/tiger.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
                 Yala National Park
@@ -143,76 +143,14 @@ export default function TourSection() {
               To See Leopards In The Wild!
             </p>
           </div>
-
-         
         </div>
 
-        {/* day 4 */}
+        {/* day 4  */}
         <div className="border border-green-500 rounded-2xl p-4">
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/classic/day4.jpeg"
-              alt="Coconut Tree Hill At Mirissa"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-
-          {/* Caption */}
-          <p className="mt-2 text-center text-sm text-gray-700">
-            Express Train Through The Hill Country
-          </p>
-
-          {/* Day Title */}
-          <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 4 - Ella
-          </h2>
-
-          {/* point 1 */}
-          <div className="mb-4">
-            {/* title */}
-
-            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/train.jpeg" className="w-6 shrink-0" alt="" />
-
-              <p className="text-lg font-semibold text-center leading-snug">
-                By Train Through <br /> The Hill Country
-              </p>
-            </div>
-
-            <p className="text-center text-sm">
-              Ascent Of The Ramboda Pass Via Hairpin Bends I The Old British
-              Hill Station Of Nuwara Eliya I 1st Class Seat On The Hill Country
-              Express
-            </p>
-          </div>
-
-          {/* point 2*/}
-          <div className="mb-4">
-            {/* title */}
-
-            <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/morning.jpeg" className="w-6 shrink-0" alt="" />
-
-              <p className="text-lg font-semibold text-center leading-snug">
-                The Pretty Village <br /> Of Ella
-              </p>
-            </div>
-
-            <p className="text-center text-sm">
-              9 Arch Railway Bridge I Little Adam’s Peak Viewpoint I Beautiful
-              Views Of The Lowlands From Ella Gap
-            </p>
-          </div>
-        </div>
-
-        {/* day 5 */}
-        <div className="border border-green-500 rounded-2xl p-4">
-          {/* Image */}
-          <div className="relative w-full h-82">
-            <Image
-              src="/tours/classic/day5.jpeg"
+              src="/tours/southern/day4.jpg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -226,7 +164,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 5 - To Beach Hotel
+            DAY 5 - To Airport or Beach Hotel
           </h2>
 
           {/* point 1 */}
@@ -234,17 +172,12 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/island.png" className="w-6 shrink-0" alt="" />
+              <img src="/tours/plane.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Relax On Sri Lanka’s Beaches
+                drop off at Colombo Airport or Your Beach Hotel
               </p>
             </div>
-
-            <p className="text-center text-sm">
-              Whale Watching At Mirissa I River Boat Trips Turtle Hatchery I
-              Lagoon Watersports
-            </p>
           </div>
         </div>
       </section>
@@ -270,7 +203,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-left text-2xl font-marcellus font-bold tracking-wide">
-            Southern Tour Of Sri Lanka
+            Tour Of Southern Sri Lanka
           </h2>
 
           {/* points */}
