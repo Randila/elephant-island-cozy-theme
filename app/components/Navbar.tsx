@@ -57,8 +57,8 @@ export default function Navbar() {
   const primaryLinks = [
     { label: "Home", href: "/" },
     { label: "Featured Tours", href: "/tours" },
-    { label: "About Sri Lanka", href: "/about" },
-    { label: "About Us", href: "/contact" },
+    { label: "About Sri Lanka", href: "/srilanka" },
+    { label: "About Us", href: "/about" },
   ];
 
   const mobileLinks = [

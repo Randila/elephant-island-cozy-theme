@@ -62,103 +62,170 @@ export default function ContactSplitSection() {
 
   return (
     <section className="w-full bg-white">
-      <div className="grid min-h-[85vh] grid-cols-1 lg:grid-cols-2">
+      <div className="">
         {/* LEFT: contact info */}
-        <div className="px-6 py-16 sm:px-10 lg:px-16">
-          <div className="mx-auto max-w-[660px]">
-            <p className="text-[11px] font-semibold tracking-[0.18em] text-black/50">
-              CONTACT INFORMATION
+        <div className="px-6 py-16 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <div className="mx-auto max-w-165 border border-green-500 rounded-2xl p-8">
+            <p className="text-sm font-semibold tracking-[0.18em] text-black/50 text-center lg:text-left">
+              WELCOME TO ELEPHANT ISLAND
             </p>
 
-            <h2 className="mt-6 font-marcellus text-4xl tracking-tight text-black/90 sm:text-5xl">
-              Elephant Island
+            <h2 className="mt-6 font-marcellus text-4xl tracking-tight text-black/90 sm:text-5xl text-center lg:text-left">
+              About Our Company
             </h2>
 
-            <div className="mt-8 space-y-2 text-[15px] leading-7 text-black/60">
-              <p>Nugegoda Business Center</p>
-              <p className="-mt-2">80 Nawala Road</p>
-              <p className="-mt-2">Nugegoda,Sri Lanka</p>
+            <h6 className="font-bold text-xl text-center lg:text-left mt-4">
+              Elephant Island
+            </h6>
+            <div className="text-center lg:text-left mt-2">
+              <p>Start Of Business : 2001</p>
+              <p>Years in Business : 25 Years</p>
+              <p className="mt-4">
+                Our company has so far hosted in excess of 25 000 visitors to
+                Sri Lanka and The Maldives.
+              </p>
+            </div>
+          </div>
+
+          <div className="border border-green-500 rounded-2xl p-4 lg:col-span-2">
+            {/* Day Title */}
+            <h2 className="my-4 text-center text-xl font-marcellus font-bold tracking-wide lg:text-left">
+              Sri Lanka Office
+            </h2>
+            {/* Google Map */}
+            <div className="mb-4 overflow-hidden rounded-xl border border-zinc-200">
+              <iframe
+                title="Sri Lanka Office Location"
+                src="https://www.google.com/maps?q=Office%2031%20Nugegoda%20Business%20Centre%2080%20Nawala%20Road%20Nugegoda%20Sri%20Lanka%2000800&output=embed"
+                className="h-56 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
+            {/* Address */}
+            <div className="mt-4 text-sm text-black/60">
+              <p>Office 31</p>
+              <p>Nugegoda Business Centre</p>
+              <p>80 Nawala Road</p>
+              <p>Nugegoda</p>
+              <p>Colombo, Sri Lanka</p>
+              <p>00800</p>
+            </div>
+
+            {/* Contact Info */}
             <div className="mt-6 space-y-2 text-[15px] leading-7 text-black/70">
-              <p>
-                <span className="font-semibold text-black/80">
-                  Phone/ WhatsApp:
-                </span>{" "}
-                +94 77 707 2265
-              </p>
               <p>
                 <span className="font-semibold text-black/80">Email:</span>{" "}
                 info@elephant-island.com
               </p>
-            </div>
 
-
-          
-          </div>
-        </div>
-
-        {/* RIGHT: image background + form card */}
-        <div className="relative overflow-hidden">
-          {/* Background image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/form.jpg)" }} // 👈 change
-          />
-          {/* subtle overlay (optional) */}
-          <div className="absolute inset-0 bg-black/10" />
-
-          {/* Form card */}
-          <div className="relative z-10 flex min-h-[85vh] items-center justify-center px-6 py-16 sm:px-10">
-            <div className="w-full max-w-md bg-white px-6 py-12 shadow-2xl sm:px-12 sm:py-14">
-              <p className="text-center text-[11px] font-semibold tracking-[0.18em] text-black/50">
-                CONTACT FORM
+              <p>
+                <span className="font-semibold text-black/80">
+                  Phone / WhatsApp:
+                </span>{" "}
+                +94 77 707 2265
               </p>
 
-              <h3 className="mt-5 text-center font-marcellus text-4xl text-black/90 sm:text-3xl">
-               Contact Our <br/> Sri Lanka Travel Experts
-              </h3>
-
-              <form onSubmit={onSubmit} className="mt-10 space-y-5">
-                <Field
-                  name="name"
-                  value={form.name}
-                  onChange={onChange}
-                  placeholder="Your Name"
-                />
-                <Field
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={onChange}
-                  placeholder="Your Email"
-                />
-                <Field
-                  name="subject"
-                  value={form.subject}
-                  onChange={onChange}
-                  placeholder="Subject"
-                />
-
-                <div>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={onChange}
-                    placeholder="How Can We Help You?"
-                    rows={5}
-                    className="w-full rounded-none border border-black/10 bg-white px-4 py-4 text-[14px] text-black/70 outline-none transition focus:border-black/30"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#E8A7C5] py-4 text-center text-[13px] font-semibold tracking-wide text-white transition hover:brightness-95"
+              <p className="text-blue-500 break-all">
+                <span className="font-semibold text-black/80">Facebook:</span>{" "}
+                <a
+                  href="https://www.facebook.com/elephant.island.lk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Send Your Message
-                </button>
-              </form>
+                  https://www.facebook.com/elephant.island.lk/
+                </a>
+              </p>
+
+              <p className="text-blue-500 break-all">
+                <span className="font-semibold text-black/80">Instagram:</span>{" "}
+                <a
+                  href="https://www.instagram.com/elephantisland.lk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.instagram.com/elephantisland.lk/
+                </a>
+              </p>
             </div>
+          </div>
+
+          <div className="border border-green-500 rounded-2xl p-4">
+            <img src="/masks.jpeg" alt="" />
+
+            {/* Caption */}
+            <p className="mt-2 text-center text-sm text-gray-700">
+              Masks At Ambalangoda
+            </p>
+
+            {/* Day Title */}
+            <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+              Trusted Hospitality Professionals
+            </h2>
+
+            <p className="text-center text-sm mt-2">
+              We are an established Sri Lanka travel company that owns and
+              operates 2 of the island’s premier luxury boutique hotels.
+            </p>
+          </div>
+
+          <div className="border border-green-500 rounded-2xl p-4">
+            <img src="/elephantStables.jpeg" alt="" />
+
+            {/* Day Title */}
+            <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+              The Elephant Stables
+            </h2>
+
+            <p className="text-blue-500 text-center text-sm mt-1">
+              <a href="www.elephantstables.com">www.elephantstables.com</a>
+            </p>
+
+            <p className="text-center text-sm mt-2">
+              The former home of one of Sri Lanka’s most aristocratic families
+              now converted in to a famous boutique hotel with designer
+              interiors and stunning views.
+            </p>
+          </div>
+
+          <div className="border border-green-500 rounded-2xl p-4">
+            <img src="/riverdale.jpeg" alt="" />
+
+            {/* Day Title */}
+            <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+              Riverdale Bungalow
+            </h2>
+
+            <p className="text-blue-500 text-center text-sm mt-1">
+              <a href="www.riverdalebungalow.com">www.riverdalebungalow.com</a>
+            </p>
+
+            <p className="text-center text-sm mt-2">
+              A famous colonial heritage bungalow where Sir David Lean filmed
+              much of the classic film The Bridge On The River Kwai.
+            </p>
+          </div>
+
+          <div className="border border-green-500 rounded-2xl p-4">
+            <img src="/slil.jpeg" alt="" />
+
+            {/* Day Title */}
+            <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
+              Sri Lanka In Luxury
+            </h2>
+
+            <p className="text-blue-500 text-center text-sm mt-1">
+              <a href="www.srilankainluxury.com">www.srilankainluxury.com</a>
+            </p>
+
+            <p className="text-center text-sm mt-2">
+              We are also part of Sri Lanka In Luxury Ltd a leading luxury tour
+              operator in the UK. All of our clients departing from the UK are
+              additionally 100% Financially Protected by our ATOL License and
+              TOPP policy with T@G Insurance Plc.
+            </p>
           </div>
         </div>
       </div>
