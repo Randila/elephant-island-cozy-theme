@@ -511,7 +511,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 {step < 3 ? (
                   <button
                     type="button"
-                    onClick={next}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      next();
+                    }}
                     className="w-2/3 bg-[#E8A7C5] py-3 text-center font-medium text-white transition hover:brightness-95 cursor-pointer"
                   >
                     Next
