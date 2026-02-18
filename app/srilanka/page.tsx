@@ -18,10 +18,10 @@ export default function About() {
       <Navbar />
 
       <HotelHeroSection
-        title="About The Hotel"
-        subtitle="The seaside haven of warmth, tranquility and restoration"
-        tagline="AN ICONIC HOTEL SINCE 1998"
-        backgroundImage="/about.jpg"
+        title="What To See & Do In Sri Lanka?"
+        subtitle=""
+        tagline=""
+        backgroundImage="/aboutSL.jpg"
       />
 
       {/* places */}

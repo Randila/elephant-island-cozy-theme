@@ -15,10 +15,10 @@ export default function About() {
           <Navbar />
     
       <HotelHeroSection
-        title="About The Hotel"
-        subtitle="The seaside haven of warmth, tranquility and restoration"
-        tagline="AN ICONIC HOTEL SINCE 1998"
-        backgroundImage="/about.jpg"
+        title="About Elephant Island"
+        subtitle=""
+        tagline=""
+        backgroundImage="/elephant.jpg"
       />
 
       <IntroText 
@@ -38,7 +38,7 @@ export default function About() {
                 {/* Left Column - Parallax Image */}
                 <div className="order-2 lg:order-1 lg:p-10">
                   <Parallax
-                    bgImage="/images/river.jpeg"
+                    bgImage="/galle.jpg"
                     bgImageAlt="Restaurant interior"
                     strength={75}
                     className="h-[400px] sm:h-[600px] lg:h-[90dvh] 2xl:h-[700px] w-auto overflow-hidden hidden xl:block"
