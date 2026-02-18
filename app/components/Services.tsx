@@ -51,6 +51,7 @@ const TwoColumnSection = () => {
             >
               <div className="h-full flex items-center justify-center" />
             </Parallax>
+            <p className="text-center mt-2 text-sm text-gray-700">Millennium Elephant Foundation</p>
           </div>
 
           {/* Right Column - Text Content */}

@@ -19,12 +19,15 @@ const TwoColumnSection = () => {
                 {/* Optional: Add overlay or content here if needed */}
               </div>
             </Parallax>
+            <p className="text-center mt-2 text-sm text-gray-700 hidden xl:block">Gal Oya Lodge</p>
 
             <img
               src="/images/gal-oya-lodge.jpeg"
               className="xl:hidden"
               alt=""
             />
+            <p className="text-center mt-2 text-sm text-gray-700 xl:hidden">Gal Oya Lodge</p>
+
           </div>
 
           {/* Right Column - Text Content */}

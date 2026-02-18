@@ -54,8 +54,11 @@ const TwoColumnSectionReverse = () => {
                 {/* Optional: Add overlay or content here if needed */}
               </div>
             </Parallax>
+            <p className="text-center mt-2 text-sm text-gray-700 hidden xl:block">Nine Arch Bridge, Ella</p>
 
             <img src="/images/Nine-Arch-Bridge-ella.jpeg" className="xl:hidden" alt="" />
+            <p className="text-center mt-2 text-sm text-gray-700 xl:hidden">Nine Arch Bridge, Ella</p>
+
           </div>
         </div>
       </div>
