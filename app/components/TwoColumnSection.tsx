@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Parallax } from "react-parallax";
+import ContactModal from "./ContactModal";
 
 const TwoColumnSection = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   return (
     <section className="relative py-20 flex items-center bg-white">
       <div className="container mx-auto px-6 lg:px-0">
@@ -53,7 +56,10 @@ const TwoColumnSection = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start">
-              <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-marcellus font-medium text-black bg-[#E8A7C5] rounded-full transition-all duration-300 overflow-hidden cursor-pointer">
+              <button 
+                onClick={() => setIsContactModalOpen(true)}
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-marcellus font-medium text-black bg-[#E8A7C5] rounded-full transition-all duration-300 overflow-hidden cursor-pointer"
+              >
                 {/* Button text */}
                 <span className="px-4">Contact Us</span>
 
@@ -66,6 +72,12 @@ const TwoColumnSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </section>
   );
 };

@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Parallax } from "react-parallax";
+import ContactModal from "./ContactModal";
 
 const TwoColumnSectionReverse = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   return (
     <section className="relative pb-20 flex items-center bg-white">
       <div className="container mx-auto px-6 lg:px-12">
@@ -30,7 +33,10 @@ const TwoColumnSectionReverse = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start">
-              <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-marcellus font-medium text-black bg-[#E8A7C5] rounded-full transition-all duration-300 overflow-hidden cursor-pointer">
+              <button 
+                onClick={() => setIsContactModalOpen(true)}
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-marcellus font-medium text-black bg-[#E8A7C5] rounded-full transition-all duration-300 overflow-hidden cursor-pointer"
+              >
                 {/* Button text */}
                 <span className="px-4">Contact Us</span>
 
@@ -62,6 +68,12 @@ const TwoColumnSectionReverse = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </section>
   );
 };

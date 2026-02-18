@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ContactModal from "./ContactModal";
 
 type MenuGroup = { title: string; items: { label: string; href: string }[] };
 
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [isPastHero, setIsPastHero] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -155,13 +157,13 @@ export default function Navbar() {
 
             {/* RIGHT (mobile: Book LEFT) (desktop: Book RIGHT) */}
             <div className="flex order-1 md:order-3 justify-start md:justify-end">
-              <Link
-                href="/contact"
+              <button
+                onClick={() => setIsContactModalOpen(true)}
                 className={`rounded-full p-4 text-xs tracking-[0.12em] uppercase transition font-jost ${bookButtonClasses}`}
               >
                 <span className="inline md:hidden">Contact</span>
                 <span className="hidden md:inline">Contact Now</span>
-              </Link>
+              </button>
             </div>
           </div>
         </nav>
@@ -279,6 +281,12 @@ export default function Navbar() {
           </div>
         </div>
       </aside>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </>
   );
 }

@@ -17,11 +17,10 @@ export default function Contact() {
         tagline="WE'RE HERE TO HELP"
         backgroundImage="/sea.jpeg"
       />
-      <ContactSplitSection />
-
+     
+     
       <BookingHero backgroundImage="/road.jpg" />
 
-      <ImageOffsetSwiper slides={tours} />
 
       <NewsletterSection backgroundImageUrl="/stay.webp" />
       <SiteFooter />
