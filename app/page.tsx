@@ -60,7 +60,7 @@ export default function Home() {
 
       <Services/>
 
-      <NewsletterSection backgroundImageUrl="/banner.jpeg" />
+      <NewsletterSection />
       <SiteFooter />
     </>
   );

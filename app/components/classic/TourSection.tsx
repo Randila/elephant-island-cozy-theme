@@ -333,6 +333,8 @@ export default function TourSection() {
                 Entrance Fees To Attractions And National Parks.
               </p>
             </div>
+
+            <img src="/map/3.png" className="w-full" alt="" />
           </div>
         </div>
       </section>

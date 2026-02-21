@@ -359,7 +359,7 @@ export default function About() {
       <BookingHero backgroundImage="/road.jpg" />
       <ImageOffsetSwiper slides={tours} />
 
-      <NewsletterSection backgroundImageUrl="/stay.webp" />
+      <NewsletterSection />
       <SiteFooter />
     </>
   );

@@ -23,7 +23,7 @@ export default function Tour() {
 
       <ImageOffsetSwiper slides={tours} />
 
-      <NewsletterSection backgroundImageUrl="/stay.webp" />
+      <NewsletterSection />
       <SiteFooter />
     </>
   );

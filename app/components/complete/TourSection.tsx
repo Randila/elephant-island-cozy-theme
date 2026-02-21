@@ -420,7 +420,7 @@ export default function TourSection() {
       <section
         className="bg-cover bg-center flex items-center justify-end p-6 lg:p-20 mb-12"
         style={{
-          backgroundImage: "url('/tours/southern/galle.webp')",
+          backgroundImage: "url('/tours/complete/galle.jpg')",
         }}
       >
         {/* cost card */}
@@ -428,7 +428,7 @@ export default function TourSection() {
           {/* Image */}
           <div className="relative w-full h-82">
             <Image
-              src="/tours/southern/cost.jpeg"
+              src="/tours/complete/cost.jpeg"
               alt="Colombo City Centre Shopping Mall"
               fill
               className="object-cover rounded-xl"
@@ -437,7 +437,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-left text-2xl font-marcellus font-bold tracking-wide">
-            Southern Tour Of Sri Lanka
+            Complete Tour Of Sri Lanka
           </h2>
 
           {/* points */}
@@ -473,6 +473,9 @@ export default function TourSection() {
               </p>
             </div>
           </div>
+
+
+          <img src="/map/6.png" className="w-full" alt="" />
         </div>
       </section>
 

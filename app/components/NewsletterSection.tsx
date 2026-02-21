@@ -4,12 +4,10 @@ import React, { useState } from "react";
 import { Parallax } from "react-parallax";
 
 type NewsletterSectionProps = {
-  backgroundImageUrl: string;
   strength?: number;
 };
 
 export default function NewsletterSection({
-  backgroundImageUrl,
   strength = 100,
 }: NewsletterSectionProps) {
   const [email, setEmail] = useState("");
@@ -22,7 +20,7 @@ export default function NewsletterSection({
 
   return (
     <Parallax
-      bgImage={backgroundImageUrl}
+      bgImage="/banner.jpeg"
       strength={strength}
       bgImageStyle={{ objectFit: "cover" }}
     >

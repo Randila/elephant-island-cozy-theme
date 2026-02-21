@@ -22,7 +22,7 @@ export default function Contact() {
       <BookingHero backgroundImage="/road.jpg" />
 
 
-      <NewsletterSection backgroundImageUrl="/stay.webp" />
+      <NewsletterSection />
       <SiteFooter />
     </>
   );

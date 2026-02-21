@@ -377,7 +377,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       type="tel"
                       value={form.phone}
                       onChange={(e) => set("phone", e.target.value)}
-                      placeholder="+94 7X XXX XXXX"
+                      placeholder="+IDD 7X XXX XXXX"
                       className={inputClass}
                     />
                   </div>

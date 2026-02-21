@@ -221,7 +221,11 @@ export default function TourSection() {
             {/* title */}
 
             <div className="mt-2 flex items-start justify-center gap-3 px-6 py-3">
-              <img src="/tours/waterfall.jpeg" className="w-6 shrink-0" alt="" />
+              <img
+                src="/tours/waterfall.jpeg"
+                className="w-6 shrink-0"
+                alt=""
+              />
 
               <p className="text-lg font-semibold text-center leading-snug">
                 The Descent To <br /> Sri Lanka’s Beaches
@@ -272,7 +276,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 4 - Depart Colombo Airport
+            DAY 5 - Depart Colombo Airport
           </h2>
 
           {/* point 1 */}
@@ -293,7 +297,9 @@ export default function TourSection() {
       {/* cost card */}
       <section
         className="bg-cover bg-center flex items-center justify-end p-6 lg:p-20 mb-12"
-        style={{ backgroundImage: "url('/tours/hillcountry/nuwaraEliya.webp')" }}
+        style={{
+          backgroundImage: "url('/tours/hillcountry/nuwaraEliya.webp')",
+        }}
       >
         {/* cost card */}
         <div className="max-w-lg bg-white border border-green-500 rounded-2xl p-4">
@@ -345,6 +351,8 @@ export default function TourSection() {
               </p>
             </div>
           </div>
+
+          <img src="/map/3.png" className="w-full" alt="" />
         </div>
       </section>
 

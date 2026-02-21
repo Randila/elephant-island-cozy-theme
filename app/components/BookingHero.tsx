@@ -285,15 +285,15 @@ export default function BookingHero({
                 
 
                 <h1 className="font-marcellus text-4xl leading-[1.02] text-white md:text-5xl">
-                  Contact Our Sri Lankan Travel Experts
+                  Contact Our Sri Lanka Travel Experts
                 </h1>
 
                 <h2 className="font-marcellus text-xl leading-[1.02] text-white md:text-2xl mt-6">
-                  Tel : 0203 038 2586
+                  Tel : +94 77 707 2265
                 </h2>
 
                  <h2 className="font-marcellus text-xl leading-[1.02] text-white md:text-2xl mt-6">
-                  Email : info@srilankainluxury.com
+                  Email : info@elephant-island.com
                 </h2>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
@@ -396,7 +396,7 @@ export default function BookingHero({
                               type="tel"
                               value={form.phone}
                               onChange={(e) => set("phone", e.target.value)}
-                              placeholder="+94 7X XXX XXXX"
+                              placeholder="+IDD 7X XXX XXXX"
                               className={inputClass}
                             />
                           </div>

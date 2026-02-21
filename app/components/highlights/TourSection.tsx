@@ -272,6 +272,8 @@ export default function TourSection() {
               </p>
             </div>
           </div>
+
+          <img src="/map/1.png" className="w-full" alt="" />
         </div>
       </section>
 

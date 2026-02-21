@@ -164,7 +164,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 5 - To Airport or Beach Hotel
+            DAY 4 - To Airport or Beach Hotel
           </h2>
 
           {/* point 1 */}
@@ -175,7 +175,7 @@ export default function TourSection() {
               <img src="/tours/plane.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                drop off at Colombo Airport or Your Beach Hotel
+                Drop off at Colombo Airport or Your Beach Hotel
               </p>
             </div>
           </div>
@@ -238,6 +238,8 @@ export default function TourSection() {
                 Entrance Fees To Attractions And National Parks.
               </p>
             </div>
+
+            <img src="/map/4.png" className="w-full" alt="" />
           </div>
         </div>
       </section>

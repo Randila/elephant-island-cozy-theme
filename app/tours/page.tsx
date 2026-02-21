@@ -27,7 +27,7 @@ export default function Tours() {
       <TourGrid tours={tours} />
 
 
-        <NewsletterSection backgroundImageUrl="/stay.webp" />
+        <NewsletterSection />
             <SiteFooter />
     </>
   );

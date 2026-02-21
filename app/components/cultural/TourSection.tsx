@@ -255,7 +255,7 @@ export default function TourSection() {
 
           {/* Day Title */}
           <h2 className="mt-4 text-center text-xl font-marcellus font-bold tracking-wide">
-            DAY 4 - Depart Colombo Airport
+            DAY 5 - Depart Colombo Airport
           </h2>
 
           {/* point 1 */}
@@ -327,6 +327,8 @@ export default function TourSection() {
                 Entrance Fees To Attractions And National Parks.
               </p>
             </div>
+
+            <img src="/map/2.png" className="w-full" alt="" />
           </div>
         </div>
       </section>
