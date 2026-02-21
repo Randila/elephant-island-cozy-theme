@@ -8,7 +8,7 @@ interface IntroTextProps {
 }
 
 export default function IntroText({
-  icon = "/main-logo.png",
+  icon = "/newLogo.png",
   label,
   title,
   description,
@@ -19,7 +19,7 @@ export default function IntroText({
         {/* Icon */}
         <div className="mx-auto flex items-center justify-center">
           <div className="w-12 text-[#55624f]">
-            <img src={icon} className="grayscale" alt="" />
+            <img src={icon} className="" alt="" />
           </div>
         </div>
 
