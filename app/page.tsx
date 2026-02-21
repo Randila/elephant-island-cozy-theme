@@ -32,7 +32,7 @@ export default function Home() {
       <TwoColumnSectionReverse />
 
     <ParallaxFeatureSection
-      bgImage="/beach.jpg"
+      bgImage="/paddy.jpeg"
       cards={[
         {
           title: "Our Vehicles",

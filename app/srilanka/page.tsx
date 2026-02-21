@@ -21,7 +21,7 @@ export default function About() {
         title="What To See & Do In Sri Lanka?"
         subtitle=""
         tagline=""
-        backgroundImage="/aboutSL.jpg"
+        backgroundImage="/animated.jpeg"
       />
 
       {/* places */}
