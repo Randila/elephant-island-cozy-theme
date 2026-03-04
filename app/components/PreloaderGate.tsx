@@ -19,7 +19,8 @@ export default function PreloaderGate({ children }: { children: React.ReactNode 
     <>
       <Preloader
         show={show}
-        videoSrc="/hero.mp4"
+        mobileVideoSrc="/video-mobile.mp4"
+        desktopVideoSrc="/video-desktop.mp4"
         logoTextTop="ELEPHANT"
         logoTextBottom="ISLAND"
         onDone={() => setShow(false)}

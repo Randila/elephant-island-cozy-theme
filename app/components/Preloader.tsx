@@ -14,13 +14,15 @@ function getRect(el: Element | null): Rect | null {
 export default function Preloader({
   show,
   onDone,
-  videoSrc = "/hero.mp4",
+  mobileVideoSrc = "/video-mobile.mp4",
+  desktopVideoSrc = "/video-desktop.mp4",
   logoTextTop = "ELEPHANT",
   logoTextBottom = "ISLAND",
 }: {
   show: boolean;
   onDone: () => void;
-  videoSrc?: string;
+  mobileVideoSrc?: string;
+  desktopVideoSrc?: string;
   logoTextTop?: string;
   logoTextBottom?: string;
 }) {
@@ -171,13 +173,22 @@ export default function Preloader({
         {showVideo && (
           <>
             <video
-              className="h-full w-full object-cover"
-              src={videoSrc}
+              className="h-full w-full object-cover md:hidden"
+              src={mobileVideoSrc}
               autoPlay
               muted
               loop
               playsInline
-              preload="auto"
+              preload="metadata"
+            />
+            <video
+              className="hidden h-full w-full object-cover md:block"
+              src={desktopVideoSrc}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
             />
             <div className="absolute inset-0 bg-black/20" />
           </>
