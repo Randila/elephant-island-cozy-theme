@@ -15,7 +15,7 @@ export default function Tours() {
         title="Our Tours"
         subtitle="Discover the beauty and adventure of Sri Lanka"
         tagline="UNFORGETTABLE EXPERIENCES"
-        backgroundImage="/beach.jpg"
+        backgroundImage="/ourTours.jpeg"
       />
 
       <IntroText 

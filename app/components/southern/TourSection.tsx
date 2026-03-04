@@ -159,7 +159,7 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            Beach Swings At Dickwella
+            The Riff, Hikkaduwa
           </p>
 
           {/* Day Title */}
@@ -175,7 +175,7 @@ export default function TourSection() {
               <img src="/tours/plane.jpeg" className="w-6 shrink-0" alt="" />
 
               <p className="text-lg font-semibold text-center leading-snug">
-                Drop off at Colombo Airport or Your Beach Hotel
+                Drop Off At Colombo Airport Or Your Beach Hotel
               </p>
             </div>
           </div>

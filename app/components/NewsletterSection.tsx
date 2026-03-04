@@ -38,7 +38,7 @@ export default function NewsletterSection({
               </p>
 
               <h2 className="mt-6 font-marcellus text-2xl leading-[1.05] text-white sm:text-5xl lg:text-4xl">
-                Our company has so far hosted in excess of 35 000 visitors to
+                Our company has so far hosted in excess of 35,000 visitors to
                 Sri Lanka.
               </h2>
 

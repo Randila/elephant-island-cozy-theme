@@ -82,7 +82,7 @@ export default function ContactSplitSection() {
               <p>Start Of Business : 2001</p>
               <p>Years in Business : 25 Years</p>
               <p className="mt-4">
-                Our company has so far hosted in excess of 25 000 visitors to
+                Our company has so far hosted in excess of 35,000 visitors to
                 Sri Lanka and The Maldives.
               </p>
             </div>

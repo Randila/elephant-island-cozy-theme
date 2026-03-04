@@ -68,7 +68,7 @@ export default function TourGrid({ tours }: { tours: Tour[] }) {
                     ) : null}
 
                     {/* button */}
-                    <div className="mt-6 inline-flex items-center justify-between gap-3 rounded-full bg-white/20 w-36 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/25 transition group-hover:bg-white/25">
+                    <div className="mt-6 inline-flex items-center justify-between gap-3 rounded-full bg-[#E8A7C5] w-36 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/25 transition group-hover:bg-white/25">
                       
                       <div className="pl-4">More info</div>
 
