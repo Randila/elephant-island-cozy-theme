@@ -66,8 +66,8 @@ export default function ParallaxFeatureSection({
 
               {/* subtitle */}
               <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-white/85">
-                A superior, 5-star resort embodying the very best of Fiji
-                Islands luxury, tranquility &amp; sophistication.
+                A Superb Mix Of Beaches, Wildlife, Culture, Food And Landscapes
+                In The World's Most Beautiful Island.
               </p>
             </div>
           </div>
@@ -101,7 +101,6 @@ export default function ParallaxFeatureSection({
                   <p className="mx-auto mt-3 max-w-[340px] text-sm leading-6 text-[#1b1b1b]/70">
                     {c.desc}
                   </p>
-
                 </div>
               ))}
             </div>

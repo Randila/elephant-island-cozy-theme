@@ -66,18 +66,15 @@ export default function TourGrid({ tours }: { tours: Tour[] }) {
                         {tour.subtitle}
                       </p>
                     ) : null}
-
                     {/* button */}
-                    <div className="mt-6 inline-flex items-center justify-between gap-3 rounded-full bg-[#E8A7C5] w-36 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/25 transition group-hover:bg-white/25">
-                      
+                    <div className="mt-6 inline-flex items-center justify-between gap-3 rounded-full bg-white/20 w-40 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/25 transition group-hover:bg-white/25">
                       <div className="pl-4">More info</div>
 
                       <div>
-                        <span className="inline-flex p-3 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20">
-                          <ChevronRight className="w-3 h-3 text-white" />
+                        <span className="inline-flex p-4 items-center justify-center rounded-full ring-1 ring-white/20 bg-[#E8A7C5]">
+                          <ChevronRight className="w-3 h-3 text-black" />
                         </span>
                       </div>
-
                     </div>
                   </div>
                 </Wrapper>

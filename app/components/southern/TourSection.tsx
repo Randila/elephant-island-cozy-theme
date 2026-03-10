@@ -20,7 +20,7 @@ export default function TourSection() {
 
           {/* Caption */}
           <p className="mt-2 text-center text-sm text-gray-700">
-            The Ministry of Crab Restaurant
+            Ministry of Crab Restaurant
           </p>
 
           {/* Day Title */}
