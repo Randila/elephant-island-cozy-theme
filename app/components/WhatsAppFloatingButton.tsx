@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function WhatsAppFloatingButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,22 @@ export default function WhatsAppFloatingButton() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const footer = document.querySelector("[data-site-footer]");
+
+    if (!footer) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsFooterVisible(entry.isIntersecting);
+    });
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <a
       href="https://wa.me/94777072265"
@@ -23,7 +40,7 @@ export default function WhatsAppFloatingButton() {
       rel="noreferrer"
       aria-label="Chat with us on WhatsApp"
       className={`fixed right-4 z-[1000] flex items-center gap-3 rounded-full bg-[#0ca332] px-4 py-3 pr-3 text-white shadow-[0_14px_36px_rgba(12,163,50,0.35)] transition-all duration-300 ease-out hover:bg-[#0a912d] md:hidden ${
-        isVisible
+        isVisible && !isFooterVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-8 opacity-0"
       }`}

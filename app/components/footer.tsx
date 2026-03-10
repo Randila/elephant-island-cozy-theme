@@ -12,7 +12,7 @@ export default function SiteFooter({
   email = "info@elephant-island.com",
 }: FooterProps) {
   return (
-    <footer className="bg-[#0a0a0a] text-white/80">
+    <footer data-site-footer className="bg-[#0a0a0a] text-white/80">
       {/* Top grid */}
       <div className="border-t border-white/10">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-0 px-6 md:grid-cols-4">
