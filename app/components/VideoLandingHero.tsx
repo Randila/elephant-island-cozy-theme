@@ -47,7 +47,7 @@ function getYouTubeEmbedUrl(url: string) {
 }
 
 export default function VideoLandingHero({
-  mobileSrc = "https://www.youtube.com/shorts/OpqQSvYBqdk",
+  mobileSrc = "https://www.youtube.com/shorts/afN9yIyr8wQ",
   desktopSrc = "https://www.youtube.com/watch?v=Aqk3N642eLw",
 }: VideoLandingHeroProps) {
   const mobileEmbedSrc = getYouTubeEmbedUrl(mobileSrc);

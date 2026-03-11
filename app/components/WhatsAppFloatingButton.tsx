@@ -39,17 +39,17 @@ export default function WhatsAppFloatingButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className={`fixed right-4 z-[1000] flex items-center gap-3 rounded-full bg-[#0ca332] px-4 py-3 pr-3 text-white shadow-[0_14px_36px_rgba(12,163,50,0.35)] transition-all duration-300 ease-out hover:bg-[#0a912d] md:hidden ${
+      className={`fixed right-4 z-[1000] flex items-center gap-3 rounded-full bg-[#0ca332] px-3 py-2 pr-2 text-white shadow-[0_14px_36px_rgba(12,163,50,0.35)] transition-all duration-300 ease-out hover:bg-[#0a912d] md:hidden ${
         isVisible && !isFooterVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-8 opacity-0"
       }`}
       style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)" }}
     >
-      <span className="font-jost text-[14px] font-semibold uppercase tracking-[0.06em]">
+      <span className="font-jost text-xs font-semibold uppercase tracking-[0.06em]">
         Chat With Us
       </span>
-      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/20">
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
         <svg
           aria-hidden="true"
           viewBox="0 0 24 24"
