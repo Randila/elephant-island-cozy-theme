@@ -3,7 +3,7 @@
 import { ContactUsPayload, ContactUsSchema } from "@/types/email.types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usePathname } from "next/navigation";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Controller, FieldName, Path, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -218,8 +218,17 @@ export default function ContactModal({
   onClose,
   showItineraryUpload = false,
 }: ContactModalProps) {
-  const fromUrl = typeof window !== undefined ? window.location.href : "Intentional Empty String";
+  // const fromUrl = typeof window !== undefined ? window.location.href : "Intentional Empty String";
+
   const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [currenthPath, setCurrentPath] = useState("");
+  useEffect(() => {
+    const fromUrl =
+      typeof window !== undefined
+        ? window.location.href
+        : "Intentional Empty String";
+    setCurrentPath(fromUrl);
+  }, []);
 
   const steps = useMemo(
     () => [
@@ -257,8 +266,8 @@ export default function ContactModal({
       travelingWith: "",
       accomodationStandard: "",
       country: "",
-      currentUrl : fromUrl
-    }
+      currentUrl: currenthPath,
+    },
   });
 
   const hanldleFormData = async (payload: ContactUsPayload) => {
@@ -272,7 +281,6 @@ export default function ContactModal({
       formData.append("accomodationStandard", payload.accomodationStandard);
       formData.append("country", payload.country);
       formData.append("currentUrl", payload.currentUrl as string);
-
 
       if (payload.description) {
         formData.append("description", payload.description);
@@ -470,7 +478,12 @@ export default function ContactModal({
                           onChange={field.onChange}
                           value={field.value}
                         >
-                          <option className="text-black" value="" disabled hidden>
+                          <option
+                            className="text-black"
+                            value=""
+                            disabled
+                            hidden
+                          >
                             Select
                           </option>
                           <option className="text-black" value="Partner">
@@ -503,7 +516,12 @@ export default function ContactModal({
                           onChange={field.onChange}
                           value={field.value}
                         >
-                          <option className="text-black" value="" disabled hidden>
+                          <option
+                            className="text-black"
+                            value=""
+                            disabled
+                            hidden
+                          >
                             Select
                           </option>
                           <option className="text-black" value="Budget">
@@ -536,7 +554,12 @@ export default function ContactModal({
                           value={field.value}
                           className="mt-2 w-full bg-transparent outline-none"
                         >
-                          <option className="text-black" value="" disabled hidden>
+                          <option
+                            className="text-black"
+                            value=""
+                            disabled
+                            hidden
+                          >
                             Select country
                           </option>
                           {COUNTRIES.map((c) => (
