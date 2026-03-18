@@ -224,7 +224,7 @@ export default function BookingHero({
   backgroundImage: string;
 }) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
-
+  const fromUrl = typeof window !== undefined ? window.location.href : "Intentional Empty String";
   const steps = useMemo(
     () => [
       {
@@ -261,6 +261,7 @@ export default function BookingHero({
       travelingWith: "",
       accomodationStandard: "",
       country: "",
+      currentUrl : fromUrl,
     },
   });
 
@@ -274,6 +275,7 @@ export default function BookingHero({
       formData.append("travelingWith", payload.travelingWith);
       formData.append("accomodationStandard", payload.accomodationStandard);
       formData.append("country", payload.country);
+      formData.append("currentUrl" , payload.currentUrl as string)
       if (payload.description) {
         formData.append("description", payload.description);
       }

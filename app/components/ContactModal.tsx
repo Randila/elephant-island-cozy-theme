@@ -2,6 +2,7 @@
 
 import { ContactUsPayload, ContactUsSchema } from "@/types/email.types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { usePathname } from "next/navigation";
 import React, { useMemo, useState } from "react";
 import { Controller, FieldName, Path, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -217,6 +218,7 @@ export default function ContactModal({
   onClose,
   showItineraryUpload = false,
 }: ContactModalProps) {
+  const fromUrl = typeof window !== undefined ? window.location.href : "Intentional Empty String";
   const [step, setStep] = useState<1 | 2 | 3>(1);
 
   const steps = useMemo(
@@ -254,7 +256,8 @@ export default function ContactModal({
       phone: "",
       travelingWith: "",
       accomodationStandard: "",
-      country: ""
+      country: "",
+      currentUrl : fromUrl
     }
   });
 
@@ -268,6 +271,9 @@ export default function ContactModal({
       formData.append("travelingWith", payload.travelingWith);
       formData.append("accomodationStandard", payload.accomodationStandard);
       formData.append("country", payload.country);
+      formData.append("currentUrl", payload.currentUrl as string);
+
+
       if (payload.description) {
         formData.append("description", payload.description);
       }
