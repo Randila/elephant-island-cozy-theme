@@ -279,7 +279,7 @@ export default function BookingHero({
 
       formData.append("name", payload.name);
       formData.append("email", payload.email);
-      formData.append("phone", payload.phone);
+      formData.append("phone", payload.phone || "Not provided");
       formData.append("travelingWith", payload.travelingWith);
       formData.append("accomodationStandard", payload.accomodationStandard);
       formData.append("country", payload.country);
@@ -505,7 +505,7 @@ export default function BookingHero({
                             <input
                               type="tel"
                               {...register("phone")}
-                              placeholder="+94 XX XXX XXXX"
+                              placeholder="+94 XX XXX XXXX (optional)"
                               className={inputClass}
                             />
                           </div>
@@ -580,9 +580,9 @@ export default function BookingHero({
                                   >
                                     Select
                                   </option>
-                                  <option className="text-black" value="Budget">
+                                  {/* <option className="text-black" value="Budget">
                                     Budget
-                                  </option>
+                                  </option> */}
                                   <option
                                     className="text-black"
                                     value="Standard"
