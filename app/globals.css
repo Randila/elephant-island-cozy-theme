@@ -34,3 +34,11 @@
 body {
   background-color: white;
 }
+
+input:focus {
+  @apply outline-none;
+}
+
+input {
+  @apply p-2;
+}
